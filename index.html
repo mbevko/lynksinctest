@@ -1,253 +1,402 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lynks Inc. — Built Right, Built Fast.</title>
-  <meta name="description" content="Underground fiber construction: HDD, trenching, conduit, splicing, and turn‑up. Reliable delivery for cities, utilities, and enterprise." />
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lynks Inc – A Fiber Optics Company</title>
+  <meta name="description" content="South Florida fiber optic splicer and missiling crews. Reliable, professional, on time." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
 
-  <!-- NAV -->
-  <header class="nav">
-    <div class="container row">
-      <a href="#home" class="brand" aria-label="Company home">
-        <span class="brand-badge"></span>
-        <span>Lynks Inc.</span>
+<!-- ── NAV ── -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo">
+      <img src="lynkslogo.jpg" alt="Lynks Inc logo" class="nav-logo-img" />
+      <div class="nav-logo-text">
+        <span class="logo-name">LYNKS INC</span>
+        <span class="logo-sub">A Fiber Optics Company</span>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:8777759657" class="btn-nav">Call Now</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mob-menu" id="mobMenu">
+    <a href="#services">Services</a>
+    <a href="#why">Why Us</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:8777759657" class="btn btn-orange">Call Now</a>
+  </div>
+</header>
+
+<!-- ── HERO ── -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <p class="hero-eye">South Florida Fiber Optic</p>
+    <h1 class="hero-title">
+      Day Rate<br>
+      <span class="text-orange">Splicer &amp;</span><br>
+      Missiling Crews
+    </h1>
+    <p class="hero-sub">Reliable. Professional. On Time.</p>
+    <div class="hero-ctas">
+      <a href="#services" class="btn btn-orange">Our Services</a>
+      <a href="#contact" class="btn btn-outline">Get a Quote</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-val">2-Man</span>
+        <span class="stat-lbl">Crews</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat">
+        <span class="stat-val">Certified</span>
+        <span class="stat-lbl">Technicians</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat">
+        <span class="stat-val">S. Florida</span>
+        <span class="stat-lbl">Coverage</span>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-line"><span></span></div>
+</section>
+
+<!-- ── SERVICES ── -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="sec-hd reveal">
+      <p class="sec-eye">What We Do</p>
+      <h2 class="sec-title">Our <span class="text-orange">Services</span></h2>
+    </div>
+    <div class="srv-grid">
+
+      <!-- Splicer -->
+      <div class="srv-card splicer reveal d1">
+        <div class="srv-img">
+          <div class="srv-img-fade"></div>
+          <div class="srv-lbl">Splicer Crews</div>
+        </div>
+        <div class="srv-body">
+          <div class="srv-rate">
+            <span class="rate-lbl">Splicer Hourly Rate</span>
+            <div class="rate-val text-orange">$25–$35<span class="rate-unit">/hr</span></div>
+          </div>
+          <h3 class="srv-title">2-Man Splicing Crew</h3>
+          <ul class="srv-tags">
+            <li>Fusion Splicing</li>
+            <li>Testing</li>
+            <li>QC</li>
+          </ul>
+          <ul class="srv-feat">
+            <li>
+              <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#FF6B00"/><path d="M5.5 10l3 3 6-6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Experienced &amp; Certified Techs
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#FF6B00"/><path d="M5.5 10l3 3 6-6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Top-Tier Equipment
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#FF6B00"/><path d="M5.5 10l3 3 6-6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Quality Workmanship
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn-orange btn-full">Request a Crew</a>
+        </div>
+      </div>
+
+      <!-- Missiling -->
+      <div class="srv-card missiling reveal d2">
+        <div class="srv-img">
+          <div class="srv-img-fade"></div>
+          <div class="srv-lbl">Missiling Crews</div>
+        </div>
+        <div class="srv-body">
+          <div class="srv-rate">
+            <span class="rate-lbl">Missiling Day Rate</span>
+            <div class="rate-val text-cyan">$150–$225<span class="rate-unit">/day</span></div>
+          </div>
+          <h3 class="srv-title">2-Man Missiling Crew</h3>
+          <ul class="srv-tags">
+            <li>Conduit Missiling</li>
+            <li>Placement</li>
+            <li>Pull Prep</li>
+          </ul>
+          <ul class="srv-feat">
+            <li>
+              <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#00C8E0"/><path d="M5.5 10l3 3 6-6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Fast &amp; Efficient
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#00C8E0"/><path d="M5.5 10l3 3 6-6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Safe &amp; Reliable
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#00C8E0"/><path d="M5.5 10l3 3 6-6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Meets Industry Standards
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn-cyan btn-full">Request a Crew</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICE STRIP ── -->
+<div class="strip">
+  <div class="container strip-inner">
+    <span>Fiber Splicing</span>
+    <div class="strip-dot"></div>
+    <span>Missiling</span>
+    <div class="strip-dot"></div>
+    <span>Conduit Solutions</span>
+    <div class="strip-dot"></div>
+    <span>Testing &amp; QC</span>
+  </div>
+</div>
+
+<!-- ── WHY US ── -->
+<section class="why" id="why">
+  <div class="container">
+    <div class="sec-hd reveal">
+      <p class="sec-eye">The Lynks Advantage</p>
+      <h2 class="sec-title">Why Choose <span class="text-cyan">Lynks Inc?</span></h2>
+    </div>
+    <div class="why-grid">
+
+      <div class="why-card reveal">
+        <div class="why-icon">
+          <svg viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="22" stroke="#FF6B00" stroke-width="2"/>
+            <path d="M14 24l7 7 13-14" stroke="#FF6B00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Reliable &amp; Professional</h3>
+        <p>Every crew arrives prepared, equipped, and ready to deliver results you can count on.</p>
+      </div>
+
+      <div class="why-card reveal d1">
+        <div class="why-icon">
+          <svg viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="22" stroke="#FF6B00" stroke-width="2"/>
+            <circle cx="24" cy="24" r="8" stroke="#FF6B00" stroke-width="2"/>
+            <path d="M24 8v4M24 36v4M8 24h4M36 24h4" stroke="#FF6B00" stroke-width="2" stroke-linecap="round"/>
+            <path d="M24 24V16M24 24l5 3" stroke="#FF6B00" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>On-Time Every Time</h3>
+        <p>Schedules matter. We show up when you need us and stay until the job is done right.</p>
+      </div>
+
+      <div class="why-card reveal d2">
+        <div class="why-icon">
+          <svg viewBox="0 0 48 48" fill="none">
+            <path d="M24 4l5 10h11l-9 7 3 11-10-7-10 7 3-11-9-7h11z" stroke="#FF6B00" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Quality Guaranteed</h3>
+        <p>Certified technicians and top-tier equipment ensure every splice meets spec, every time.</p>
+      </div>
+
+      <div class="why-card reveal d1">
+        <div class="why-icon">
+          <svg viewBox="0 0 48 48" fill="none">
+            <path d="M24 6l14 8v12c0 8-6 15-14 18C16 41 10 34 10 26V14z" stroke="#FF6B00" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M18 24l4 4 8-8" stroke="#FF6B00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Safety Focused</h3>
+        <p>Industry-standard safety practices protect your site, your crew, and your timeline.</p>
+      </div>
+
+      <div class="why-card reveal d2 span-2">
+        <div class="why-icon">
+          <svg viewBox="0 0 48 48" fill="none">
+            <path d="M10 36c0-8 6-14 14-14s14 6 14 14" stroke="#FF6B00" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="24" cy="18" r="6" stroke="#FF6B00" stroke-width="2"/>
+            <path d="M6 38h36" stroke="#FF6B00" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Proudly Serving South Florida</h3>
+        <p>Local expertise and regional knowledge mean faster response and zero learning curve on your job site.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA BAND ── -->
+<section class="cta-band">
+  <div class="container cta-inner">
+    <div class="cta-text reveal">
+      <h2>Let's Put Footage <span class="text-orange">In The Ground!</span></h2>
+      <p>From conduit to connection — we keep you linked.</p>
+    </div>
+    <div class="cta-btns reveal d2">
+      <a href="tel:8777759657" class="btn btn-orange btn-lg">
+        <svg viewBox="0 0 20 20" fill="none"><path d="M3 3h4l2 5-2.5 1.5A11 11 0 0012.5 13.5L14 11l5 2v4a1 1 0 01-1 1C8 18 2 12 2 4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        (877) 775-9657
       </a>
-      <nav class="menu" aria-label="Primary">
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#process">Process</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div>
-        <a class="btn btn-primary" href="#contact">Request a Bid</a>
-      </div>
+      <a href="mailto:info@lynksinc.com" class="btn btn-outline btn-lg">info@lynksinc.com</a>
     </div>
-  </header>
+  </div>
+</section>
 
-  <!-- HERO -->
-  <section id="home" class="hero section" aria-label="Hero">
-    <div class="wash" aria-hidden="true">
-      <div class="blob b1"></div>
-      <div class="blob b2"></div>
-    </div>
-    
-    <div class="container">
-      <div>
-        <span style="display:inline-flex; align-items:center; gap:.5rem; border:1px solid var(--line); background:rgba(255,255,255,.85); padding:.35rem .75rem; border-radius:999px; font-weight:600; color:#475569; font-size:.8rem; box-shadow:0 1px 0 rgba(2,6,23,.04)">
-          <span style="width:6px;height:6px;border-radius:999px; background:var(--orange); display:inline-block"></span>
-          OSP · ISP · HDD · Trenching
-        </span>
-        <div class="flex">
-            <div class="flex1">
-                <h1 style="margin-top: 18px">Fast Networks. Solid Foundations.</h1>
-                <p style="margin-top:18px; font-size: clamp(1rem, .5vw + .95rem, 1.25rem); color: var(--muted)">
-                From engineering to splice-ready delivery, we install reliable fiber infrastructure for cities, utilities, and enterprise.
-                </p>
-                <div style="margin-top: 24px; display:flex; flex-wrap:wrap; gap:12px">
-                <a class="btn btn-primary" href="#contact">Request a Bid</a>
-                <a class="btn btn-link" href="#services">View Services</a>
-                </div>
-            </div>
-            <div class="flex2">
-                <img src="lynkslogo.jpg" alt="logo" title="logo" />
-            </div>
-        </div>
-        
-      </div>
+<!-- ── CONTACT ── -->
+<section class="contact" id="contact">
+  <div class="container contact-inner">
 
-      <!-- Proof bar -->
-      <div class="proof" style="margin-top:40px">
-        <div class="item">100+ miles installed</div>
-        <div class="item">OSP &amp; ISP delivery</div>
-        <div class="item">HDD &amp; trenching expertise</div>
-        <div class="item">Certified • Insured • Bonded</div>
-      </div>
-    </div>
-  </section>
-
-  <main id="main">
-    <!-- SERVICES -->
-    <section id="services" class="section" aria-label="Services">
-      <div class="container">
-        <div style="max-width: 680px">
-          <h2>Services</h2>
-          <p style="margin-top:10px; color: var(--muted)">Full-stack underground fiber construction—from bore plan to turn-up.</p>
-        </div>
-
-        <div class="grid-4" style="margin-top:28px">
-          <article class="card pad band">
-            <div class="iconbox" aria-hidden="true">🔧</div>
-            <h3 style="margin:14px 0 6px 0">Directional Drilling (HDD)</h3>
-            <p style="color:var(--muted); margin:0">Precise bores in mixed soils with minimal surface impact.</p>
-          </article>
-
-          <article class="card pad band">
-            <div class="iconbox" aria-hidden="true">🛠️</div>
-            <h3 style="margin:14px 0 6px 0">Trenching &amp; Plowing</h3>
-            <p style="color:var(--muted); margin:0">Clean cuts, proper backfill, and fast restoration.</p>
-          </article>
-
-          <article class="card pad band">
-            <div class="iconbox" aria-hidden="true">🧵</div>
-            <h3 style="margin:14px 0 6px 0">Microtrenching &amp; Conduit</h3>
-            <p style="color:var(--muted); margin:0">Smart routes, labeled pathways, and vault placement.</p>
-          </article>
-
-          <article class="card pad band">
-            <div class="iconbox" aria-hidden="true">💡</div>
-            <h3 style="margin:14px 0 6px 0">Fiber Pulling &amp; Splicing</h3>
-            <p style="color:var(--muted); margin:0">OTDR/ILM tested, labeled, and turn-up ready.</p>
-          </article>
-        </div>
-
-        <div style="margin-top:16px">
-          <a class="btn btn-link" href="#services">Explore all services →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROCESS -->
-    <section id="process" class="section" aria-label="Our Process" style="background: linear-gradient(180deg, rgba(11,95,255,.05), transparent)">
-      <div class="container">
-        <div style="max-width: 680px">
-          <h2>Our Process</h2>
-          <p style="margin-top:10px; color: var(--muted)">A simple, transparent four-step build.</p>
-        </div>
-
-        <ol class="steps" style="margin-top:28px">
-          <li class="card pad step"><span class="chip">1</span>
-            <h3 style="margin:6px 0 6px 0">Survey &amp; Plan</h3>
-            <p style="color:var(--muted); margin:0">Site walk, utilities, and route validation.</p>
-          </li>
-          <li class="card pad step"><span class="chip">2</span>
-            <h3 style="margin:6px 0 6px 0">Permitting &amp; Locates</h3>
-            <p style="color:var(--muted); margin:0">811 coordination and traffic control plans.</p>
-          </li>
-          <li class="card pad step"><span class="chip">3</span>
-            <h3 style="margin:6px 0 6px 0">Build &amp; QA</h3>
-            <p style="color:var(--muted); margin:0">HDD/trench, conduit, vaults, pull, splice, test.</p>
-          </li>
-          <li class="card pad step"><span class="chip">4</span>
-            <h3 style="margin:6px 0 6px 0">Turn‑Up &amp; Docs</h3>
-            <p style="color:var(--muted); margin:0">OTDR/ILM results and as‑builts delivered.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section" aria-label="Featured Projects">
-      <div class="container">
-        <div style="max-width: 680px">
-          <h2>Featured Projects</h2>
-          <p style="margin-top:10px; color: var(--muted)">Representative work—minimal photos, maximum clarity.</p>
-        </div>
-
-        <div class="grid-3" style="margin-top:28px">
-          <article class="card" style="overflow:hidden">
-            <div class="ph">Image</div>
-            <div class="pad" style="padding:24px">
-              <h3 style="margin:0 0 8px 0">Metro Backbone, Springfield</h3>
-              <p style="margin:0; color:var(--muted)">18 mi backbone • HDD + splice vaults • Delivered on schedule.</p>
-            </div>
-          </article>
-
-          <article class="card" style="overflow:hidden">
-            <div class="ph">Image</div>
-            <div class="pad" style="padding:24px">
-              <h3 style="margin:0 0 8px 0">University Campus Loop</h3>
-              <p style="margin:0; color:var(--muted)">4 mi loop • Microtrench + restoration • Zero safety incidents.</p>
-            </div>
-          </article>
-
-          <article class="card" style="overflow:hidden">
-            <div class="ph">Image</div>
-            <div class="pad" style="padding:24px">
-              <h3 style="margin:0 0 8px 0">Utility Redundancy Build</h3>
-              <p style="margin:0; color:var(--muted)">9 mi dual-path • Conduit + handholes • OTDR passed first run.</p>
-            </div>
-          </article>
-        </div>
-
-        <div style="margin-top:16px">
-          <a class="btn btn-link" href="#projects">See more projects →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- SAFETY -->
-    <section id="safety" class="section" aria-label="Safety & Compliance" style="position:relative">
-      <div class="container">
-        <div style="display:grid; grid-template-columns: 1.1fr .9fr; gap:32px; align-items:start">
+    <div class="reveal">
+      <p class="sec-eye">Get In Touch</p>
+      <h2 class="sec-title">Contact <span class="text-orange">Us Today</span></h2>
+      <p class="contact-desc">Ready to schedule a crew or get a quote? Reach out — we respond fast.</p>
+      <ul class="contact-list">
+        <li>
+          <div class="ci ci-orange">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M3 3h4l2 5-2.5 1.5A11 11 0 0012.5 13.5L14 11l5 2v4a1 1 0 01-1 1C8 18 2 12 2 4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
           <div>
-            <h2>Safety &amp; Compliance</h2>
-            <p style="margin-top:10px; color: var(--muted)"><strong>Safety is the schedule.</strong> We operate 811‑first with daily tailgates, certified traffic control, and clean sites. Closeouts include OTDR/ILM results and as‑builts for a smooth handoff.</p>
-            <ul class="clean" style="margin-top:16px">
-              <li><span class="check">✓</span> OSHA‑aligned practices</li>
-              <li><span class="check">✓</span> Traffic control &amp; MOT plans</li>
-              <li><span class="check">✓</span> OTDR/ILM test results</li>
-              <li><span class="check">✓</span> As‑builts &amp; labeling standards</li>
-            </ul>
+            <span class="c-lbl">Toll Free</span>
+            <a href="tel:8777759657">(877) 775-9657</a>
+            <a href="tel:8777795657" class="c-small">(877) 77-LYNKS</a>
           </div>
-          <div class="card pad" style="background:linear-gradient(135deg,#F8FAFC,#fff)">
-            <div class="card pad" style="background:rgba(255,255,255,.9); border-color:var(--line)">
-              <p style="margin:0; color:var(--muted)"><strong style="color:var(--ink)">811 Reminder:</strong> Know what’s below—call before you dig.</p>
-              <div style="margin-top:14px; display:flex; flex-wrap:wrap; gap:12px">
-                <a class="btn btn-primary" href="#contact">Request a Bid</a>
-                <a class="btn btn-link" href="#contact">Contact Us</a>
-              </div>
-            </div>
+        </li>
+        <li>
+          <div class="ci ci-cyan">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M3 3h4l2 5-2.5 1.5A11 11 0 0012.5 13.5L14 11l5 2v4a1 1 0 01-1 1C8 18 2 12 2 4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section id="contact" class="section" aria-label="Contact">
-      <div class="container">
-        <div class="card pad" style="padding:48px; background:linear-gradient(135deg,#fff,#F8FAFC)">
-          <div style="max-width:720px">
-            <h2>Planning a build this quarter?</h2>
-            <p style="margin-top:10px; color: var(--muted)">Send your scope or drawings for a clear, itemized proposal.</p>
-            <div style="margin-top:18px; display:flex; flex-wrap:wrap; gap:12px">
-              <a class="btn btn-primary" href="#">Upload Plans</a>
-              <a class="btn btn-link" href="mailto:bids@lynksinc.com">bids@lynksinc.com</a>
-              <a class="btn" style="border:1px solid var(--line)" href="tel:+15551234567">(555) 123‑4567</a>
-            </div>
+          <div>
+            <span class="c-lbl">Cell</span>
+            <a href="tel:7863844542">786-384-4542</a>
           </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container section" style="padding: 40px 24px">
-      <div style="display:flex; flex-wrap:wrap; gap:24px; align-items:center; justify-content:space-between">
-        <div>
-          <div style="font-weight:600">Lynks Inc.</div>
-          <div style="color:var(--muted); font-size:.95rem">Service Areas • Certifications • Careers • Contact</div>
-        </div>
-        <nav style="display:flex; gap:20px; color:#475569" aria-label="Footer">
-          <a href="#services">Services</a>
-          <a href="#projects">Projects</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-      <div style="margin-top:16px; color:#94A3B8; font-size:.85rem">© <span id="year"></span> Lynks Inc. All rights reserved.</div>
+        </li>
+        <li>
+          <div class="ci ci-orange">
+            <svg viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="13" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M2 7l8 5 8-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <span class="c-lbl">Email</span>
+            <a href="mailto:info@lynksinc.com">info@lynksinc.com</a>
+          </div>
+        </li>
+        <li>
+          <div class="ci ci-cyan">
+            <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M2 10h16M10 2a14 14 0 010 16M10 2a14 14 0 000 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <span class="c-lbl">Website</span>
+            <a href="http://www.lynksinc.com" target="_blank" rel="noopener">www.lynksinc.com</a>
+          </div>
+        </li>
+      </ul>
     </div>
-  </footer>
 
-  <script>
-    // set year without needing a build step
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+    <div class="cform reveal d2" id="cform">
+      <h3>Request a Quote</h3>
+      <div class="frow">
+        <div class="fg">
+          <label for="fname">Full Name</label>
+          <input type="text" id="fname" placeholder="John Smith" required />
+        </div>
+        <div class="fg">
+          <label for="fco">Company</label>
+          <input type="text" id="fco" placeholder="Your Company" />
+        </div>
+      </div>
+      <div class="frow">
+        <div class="fg">
+          <label for="fph">Phone</label>
+          <input type="tel" id="fph" placeholder="(555) 000-0000" required />
+        </div>
+        <div class="fg">
+          <label for="fem">Email</label>
+          <input type="email" id="fem" placeholder="you@company.com" required />
+        </div>
+      </div>
+      <div class="fg">
+        <label for="fsv">Service Needed</label>
+        <select id="fsv">
+          <option value="">Select a service…</option>
+          <option>Splicer Crew</option>
+          <option>Missiling Crew</option>
+          <option>Both Services</option>
+          <option>Other / Not Sure</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label for="fmsg">Project Details</label>
+        <textarea id="fmsg" rows="4" placeholder="Describe your project, location, timeline…"></textarea>
+      </div>
+      <button class="btn btn-orange btn-full btn-lg" id="fsubmit">Send Request</button>
+      <p class="f-note">We typically respond within a few hours during business hours.</p>
+      <div class="f-success" id="fsuccess">
+        <svg viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="10" stroke="#00C8E0" stroke-width="2"/>
+          <path d="M7 12l3 3 7-7" stroke="#00C8E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p>Message sent! We'll be in touch shortly.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="container foot-inner">
+    <div class="foot-brand">
+      <div class="foot-logo">
+        <img src="lynkslogo.jpg" alt="Lynks Inc" class="foot-logo-img" />
+        <div>
+          <div class="logo-name">LYNKS INC</div>
+          <span class="logo-sub">A Fiber Optics Company</span>
+        </div>
+      </div>
+      <p class="foot-tagline">From conduit to connection — we keep you linked.</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul class="foot-srv">
+        <li>Fiber Splicing</li>
+        <li>Missiling</li>
+        <li>Conduit Solutions</li>
+        <li>Testing &amp; QC</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <div class="foot-ct">
+        <p><a href="tel:8777759657">(877) 775-9657</a></p>
+        <p><a href="tel:7863844542">786-384-4542</a></p>
+        <p><a href="mailto:info@lynksinc.com">info@lynksinc.com</a></p>
+        <p><a href="http://www.lynksinc.com" target="_blank" rel="noopener">www.lynksinc.com</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <div class="container">
+      <p>&copy; <span id="yr"></span> Lynks Inc. All rights reserved. &nbsp;|&nbsp; South Florida</p>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
 </body>
 </html>
