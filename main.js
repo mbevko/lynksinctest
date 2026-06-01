@@ -1,5 +1,5 @@
-const root    = document.documentElement;
-const heroEl  = document.querySelector('.hero');
+const root   = document.documentElement;
+const heroEl = document.querySelector('.hero');
 
 // ── NAV scroll
 const nav = document.getElementById('nav');
@@ -33,105 +33,112 @@ document.querySelectorAll('section[id]').forEach(sec => {
   }, { threshold: 0.4 }).observe(sec);
 });
 
-// ─────────────────────────────────────────────────────────────
-// METALLIC LIGHT EFFECT
-// Two parts:
-//  1. LOAD SWEEP  — plays once on page load, dramatic sweep across title + bg
-//  2. SCROLL DRIVE — continues moving the light as user scrolls the hero
-// ─────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────
+// METALLIC LIGHT SYSTEM
+//
+// Two separate tracks:
+//   currentShimmer  — the "logical" shimmer target (set by load/idle/scroll)
+//   displayShimmer  — the "visual" shimmer that slowly lerps toward the target
+//
+// The background hotspot (--shine-x / --shine-y) updates immediately so it
+// stays fast and punchy. The text color (--shimmer) and its shadow follow
+// with a gentle lag, giving the letters a slower, smoother transition.
+// ─────────────────────────────────────────────────────────
 
-// Easing functions
-function easeOutQuart(t) { return 1 - Math.pow(1 - t, 4); }
-function easeInOutCubic(t) { return t < .5 ? 4*t*t*t : 1-Math.pow(-2*t+2,3)/2; }
+let currentShimmer = 200;   // target (fast)
+let displayShimmer  = 200;  // visual (slow — lerps toward target)
+let loadDone        = false;
 
-// ── SHADOW HELPER ─────────────────────────────────────────────
-// As shimmer goes 200→0 the light moves right-to-left.
-// Shadow cast OPPOSITE the light: starts at left (-8px) → shifts to right (+8px).
-// A faint counter-glow on the light side adds just enough depth to pop.
+// How quickly text colour follows the target.
+// 0.04 = ~0.7s visible lag at 60fps — noticeably slower than the background.
+const LERP = 0.04;
+
+// ── Easing
+function easeOutQuart(t)    { return 1 - Math.pow(1 - t, 4); }
+function easeInOutCubic(t)  { return t < .5 ? 4*t*t*t : 1 - Math.pow(-2*t+2,3)/2; }
+
+// ── Shadow helper (driven by displayShimmer, not currentShimmer)
 function updateTitleShadow(shimmer) {
-  const progress = Math.max(0, Math.min((200 - shimmer) / 200, 1)); // 0=light right, 1=light left
-  const sx  = +(progress * 16 - 8).toFixed(1);   // -8px … +8px
-  const sy  = 5;
-  const blur= 18;
-  const gx  = +(-sx * 0.3).toFixed(1);            // faint rim on light side
+  const progress = Math.max(0, Math.min((200 - shimmer) / 200, 1));
+  const sx  = +(progress * 16 - 8).toFixed(1);
+  const gx  = +(-sx * 0.3).toFixed(1);
   root.style.setProperty(
     '--title-shadow',
-    `drop-shadow(${sx}px ${sy}px ${blur}px rgba(0,0,0,0.85)) ` +
+    `drop-shadow(${sx}px 5px 18px rgba(0,0,0,0.85)) ` +
     `drop-shadow(${gx}px -1px 10px rgba(255,255,255,0.06))`
   );
 }
 
-// Current shimmer position — JS owns this after load animation
-let currentShimmer = 200; // starts at 200% (far right, off-screen)
-let loadDone = false;
+// ── TEXT LERP LOOP ────────────────────────────────────────
+// Runs every frame. Slowly moves displayShimmer toward currentShimmer,
+// then applies both the gradient position and the reactive shadow.
+// Everything else (background light) is set directly and skips this loop.
+(function lerpLoop() {
+  const diff = currentShimmer - displayShimmer;
+  if (Math.abs(diff) > 0.05) {
+    displayShimmer += diff * LERP;
+    root.style.setProperty('--shimmer', displayShimmer.toFixed(2) + '%');
+    updateTitleShadow(displayShimmer);
+  }
+  requestAnimationFrame(lerpLoop);
+})();
 
-// ── LOAD SWEEP ──────────────────────────────────────────────
-// Sweeps the bright white+teal highlight across the title from right to left
-// Also moves the background radial hotspot dramatically across the hero
+// ── LOAD SWEEP ────────────────────────────────────────────
+// Animates the background hotspot fast (direct).
+// Sets currentShimmer as target — the lerp loop picks it up at its own pace.
 function playLoadSweep() {
-  const duration = 2200; // ms — long enough to be dramatic but not slow
-  const start    = performance.now();
-
-  // Text shimmer: 200% → 40% (sweeps the gradient left, revealing orange then white then teal)
-  const shimmerFrom = 200;
-  const shimmerTo   = 40;
-
-  // Background hotspot: starts top-right corner, sweeps to center
-  const sxFrom = 130, sxTo = 50;
-  const syFrom = -90, syTo = -30;
+  const duration     = 2200;
+  const start        = performance.now();
+  const shimmerFrom  = 200,  shimmerTo  = 40;
+  const sxFrom       = 130,  sxTo       = 50;
+  const syFrom       = -90,  syTo       = -30;
 
   function frame(now) {
-    const elapsed  = now - start;
-    const progress = Math.min(elapsed / duration, 1);
+    const progress = Math.min((now - start) / duration, 1);
     const eased    = easeOutQuart(progress);
 
-    // Update text shimmer + reactive shadow
+    // Target shimmer — text will slowly follow via lerp
     currentShimmer = shimmerFrom + (shimmerTo - shimmerFrom) * eased;
-    root.style.setProperty('--shimmer', currentShimmer + '%');
-    updateTitleShadow(currentShimmer);
 
-    // Update background hotspot
-    const sx = sxFrom + (sxTo - sxFrom) * eased;
-    const sy = syFrom + (syTo - syFrom) * eased;
-    root.style.setProperty('--shine-x', sx + '%');
-    root.style.setProperty('--shine-y', sy + '%');
+    // Background hotspot — immediate, stays fast
+    root.style.setProperty('--shine-x', (sxFrom + (sxTo - sxFrom) * eased) + '%');
+    root.style.setProperty('--shine-y', (syFrom + (syTo - syFrom) * eased) + '%');
 
     if (progress < 1) {
       requestAnimationFrame(frame);
     } else {
       loadDone = true;
-      // Kick off a subtle idle pulse after load sweep
       idlePulse();
     }
   }
 
-  // Delay slightly so the page/fonts have rendered
   setTimeout(() => requestAnimationFrame(frame), 200);
 }
 
-// ── IDLE PULSE ───────────────────────────────────────────────
-// Faster, wider oscillation so the metallic "breathing" is clearly visible
+// ── IDLE PULSE ────────────────────────────────────────────
+// Background: animates at 1800ms — fast, punchy.
+// Text shimmer: currentShimmer oscillates at the same rate,
+// but displayShimmer only catches up slowly — so the colour
+// change feels smooth and lags behind naturally.
 let idleFrame = null;
 function idlePulse() {
-  const duration = 1800;        // full sweep in 1.8s — noticeably faster
-  const start    = performance.now();
+  const duration    = 1800;
+  const start       = performance.now();
   const baseShimmer = currentShimmer;
 
   function pulse(now) {
     if (!loadDone) return;
     const t     = ((now - start) % (duration * 2)) / duration;
-    const wave  = t <= 1 ? t : 2 - t;   // triangle 0→1→0
+    const wave  = t <= 1 ? t : 2 - t;
     const eased = easeInOutCubic(wave);
 
-    // Shimmer swings ±22 — wide enough to visibly move the highlight band
-    const s = baseShimmer + (eased * 44) - 22;
     if (scrollY < 80) {
-      root.style.setProperty('--shimmer', s + '%');
-      updateTitleShadow(s);
+      // Text target — lerp loop handles display
+      currentShimmer = baseShimmer + (eased * 44) - 22;
 
-      // Background hotspot: sweeps diagonally so light visibly travels the surface
-      const sx = 38 + (eased * 28);      // 38% → 66% (wide horizontal sweep)
-      const sy = -52 + (eased * 48);     // -52% → -4% (dramatic vertical drop)
+      // Background — direct, stays fast
+      const sx = 38 + (eased * 28);
+      const sy = -52 + (eased * 48);
       root.style.setProperty('--shine-x', sx + '%');
       root.style.setProperty('--shine-y', sy + '%');
     }
@@ -140,41 +147,32 @@ function idlePulse() {
   idleFrame = requestAnimationFrame(pulse);
 }
 
-// ── SCROLL DRIVE ─────────────────────────────────────────────
-// As the user scrolls through the hero, the light continues moving
+// ── SCROLL DRIVE ──────────────────────────────────────────
 function onScroll() {
   if (!heroEl || !loadDone) return;
-
-  const heroH    = heroEl.offsetHeight;
-  const progress = Math.min(scrollY / (heroH * 0.7), 1);
+  const progress = Math.min(scrollY / (heroEl.offsetHeight * 0.7), 1);
 
   if (progress > 0.02) {
-    // Cancel idle pulse — scroll takes over
     if (idleFrame) { cancelAnimationFrame(idleFrame); idleFrame = null; }
 
-    // Text shimmer: 40% → 0% as you scroll (sweeps further left)
-    const s = 40 - (progress * 40);
-    currentShimmer = s;
-    root.style.setProperty('--shimmer', s + '%');
-    updateTitleShadow(s);
+    // Text target — lerp loop handles display
+    currentShimmer = 40 - (progress * 40);
 
-    // Background hotspot: moves downward as plate "tilts"
-    const sx = 50 + (progress * 20);
-    const sy = -30 + (progress * 120);
-    root.style.setProperty('--shine-x', sx + '%');
-    root.style.setProperty('--shine-y', sy + '%');
+    // Background — direct, stays fast
+    root.style.setProperty('--shine-x', (50 + progress * 20) + '%');
+    root.style.setProperty('--shine-y', (-30 + progress * 120) + '%');
+
   } else if (progress <= 0.02 && !idleFrame) {
-    // Back near top — resume idle
     idlePulse();
   }
 }
 
 window.addEventListener('scroll', onScroll, { passive: true });
 
-// ── KICK OFF ─────────────────────────────────────────────────
+// ── KICK OFF
 playLoadSweep();
 
-// ── CONTACT FORM ─────────────────────────────────────────────
+// ── CONTACT FORM
 document.getElementById('fsubmit').addEventListener('click', () => {
   const f = {
     name:  document.getElementById('fname'),

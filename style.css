@@ -245,7 +245,6 @@ input,select,textarea{font:inherit}
 
   /* shadow reacts to light direction — driven by JS via CSS var */
   filter: var(--title-shadow);
-  transition: filter .08s linear;
 
   opacity:0;
   animation:fadeUp .8s .2s forwards;
@@ -510,19 +509,119 @@ input,select,textarea{font:inherit}
   .foot-inner{grid-template-columns:1fr 1fr}
   .foot-brand{grid-column:1/-1}
 }
+
+/* ── 768px: tablet / large phone ── */
 @media(max-width:768px){
-  .nav-links{display:none}.burger{display:flex}
-  .hero-title{font-size:clamp(3rem,14vw,5.5rem)}
-  .hero-title-indent{padding-left:1.5rem}
+  .nav-links{display:none}
+  .burger{display:flex}
+
+  /* Hero — center-aligned on mobile, each word gets its own moment */
+  .hero-content{padding-top:100px;padding-bottom:40px;text-align:center}
+  .hero-label{justify-content:center}
+  .hero-label::before{display:none} /* remove left line on center layout */
+  .hero-title{
+    font-size:clamp(2.8rem,11vw,5rem);
+    text-align:center;
+  }
+  .hero-title-indent{padding-left:0} /* no indent — centered layout handles it */
+  .hero-sub{margin-left:auto;margin-right:auto;text-align:center}
+  .hero-ctas{justify-content:center}
+
+  /* Proof bar — 2×2 grid */
+  .hero-proof-inner{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0;
+    padding:0;
+  }
+  .proof-item{
+    padding:22px 16px;
+    border:1px solid var(--border);
+    display:flex;flex-direction:column;align-items:center;
+  }
+  .proof-rule{display:none}
+
   .srv-grid{grid-template-columns:1fr}
   .why-grid{grid-template-columns:1fr}
   .cta-inner{flex-direction:column;align-items:flex-start}
   .foot-inner{grid-template-columns:1fr}
   .frow{grid-template-columns:1fr}
   .foot-bot-inner{flex-direction:column;text-align:center}
+  .foot-bot-soc{justify-content:center}
 }
+
+/* ── 480px: standard phones ── */
 @media(max-width:480px){
-  .hero-ctas,.cta-actions{flex-direction:column}
-  .proof-item{padding:0 16px}
-  .cform{padding:28px 20px}
+  .container{padding:0 20px}
+  .hero-content{padding-top:90px}
+  .hero-title{font-size:clamp(2.3rem,10vw,3.8rem)}
+  .hero-ctas,.cta-actions{flex-direction:column;align-items:center}
+  .hero-ctas .btn,.cta-actions .btn{width:100%;justify-content:center}
+  .cform{padding:24px 18px}
+  .srv-card{padding:28px 22px}
+  .why-item{padding:0}
+  .cta-inner{align-items:center;text-align:center}
+  .cta-title{font-size:clamp(1.6rem,7vw,2.2rem)}
+  .cta-sub{text-align:center}
+  .contact-info .sec-title{font-size:clamp(1.6rem,7vw,2.2rem)}
+  .foot-logo-img{height:80px}
+}
+
+/* ── 380px: small phones (iPhone SE etc.) ── */
+@media(max-width:380px){
+  .container{padding:0 16px}
+  .hero-content{padding-top:80px}
+  .hero-title{font-size:clamp(2rem,9.5vw,3.2rem)}
+
+  /* Nav — slim it down */
+  .nav-inner{height:60px}
+  .logo-sub{display:none}
+  .nav-logo-img{height:38px;width:38px}
+  .logo-name{font-size:1rem}
+
+  /* Proof bar — stack fully, drop the grid gap */
+  .hero-proof-inner{grid-template-columns:1fr 1fr}
+  .proof-item{padding:16px 10px}
+  .proof-val{font-size:1.3rem}
+  .proof-lbl{font-size:.58rem}
+
+  /* Simplify hero label */
+  .hero-label{font-size:.62rem;letter-spacing:.18em}
+
+  /* Services */
+  .srv-num{font-size:2.5rem}
+  .srv-card{padding:24px 18px}
+
+  /* Footer */
+  .foot-logo-img{height:60px}
+  .footer{padding:48px 0 0}
+  .foot-inner{gap:32px;padding-bottom:32px}
+
+  /* Form */
+  .cform{padding:20px 16px}
+  .cform h3{font-size:1.4rem}
+}
+
+/* ── 320px: absolute minimum ── */
+@media(max-width:320px){
+  .container{padding:0 12px}
+  .hero-title{font-size:clamp(1.75rem,9vw,2.6rem)}
+  .hero-sub{font-size:.85rem}
+  .hero-label{display:none} /* clean it up at this tiny size */
+  .proof-val{font-size:1.1rem}
+  .proof-lbl{font-size:.52rem;letter-spacing:.1em}
+  .btn-lg{padding:13px 24px;font-size:.85rem}
+  .sec-title{font-size:clamp(1.5rem,7.5vw,2rem)}
+  .srv-card h3{font-size:1.2rem}
+  .cta-title{font-size:1.5rem}
+
+  /* proof bar: stack vertically at 320 — 2 cols is too tight */
+  .hero-proof-inner{grid-template-columns:1fr}
+  .proof-item{
+    flex-direction:row;gap:12px;
+    align-items:center;justify-content:center;
+    padding:12px 16px;
+    border-top:none;border-left:none;border-right:none;
+  }
+  .proof-val{font-size:1.1rem}
 }
