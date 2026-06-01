@@ -3,275 +3,259 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lynks Inc – A Fiber Optics Company</title>
-  <meta name="description" content="South Florida fiber optic splicer and missiling crews. Reliable, professional, on time." />
+  <title>Lynks Inc – Fiber Optic Company | South Florida</title>
+  <meta name="description" content="South Florida's premier fiber optic company. Expert installation, splicing, conduit solutions, and network infrastructure." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- ── NAV ── -->
+<!-- NAV -->
 <header class="nav" id="nav">
   <div class="container nav-inner">
     <a href="#" class="nav-logo">
-      <img src="lynkslogo.jpg" alt="Lynks Inc logo" class="nav-logo-img" />
-      <div class="nav-logo-text">
-        <span class="logo-name">LYNKS INC</span>
-        <span class="logo-sub">A Fiber Optics Company</span>
+      <img src="logo2.png" alt="Lynks Inc" class="nav-logo-img" />
+      <div>
+        <div class="logo-name">LYNKS INC</div>
+        <div class="logo-sub">Fiber Optic Company</div>
       </div>
     </a>
     <nav class="nav-links">
       <a href="#services">Services</a>
+      <a href="#about">About</a>
       <a href="#why">Why Us</a>
       <a href="#contact">Contact</a>
-      <a href="tel:8777759657" class="btn-nav">Call Now</a>
+      <a href="tel:8777759657" class="btn btn-primary">
+        <svg viewBox="0 0 20 20" fill="none"><path d="M3 3h4l2 5-2.5 1.5A11 11 0 0012.5 13.5L14 11l5 2v4a1 1 0 01-1 1C8 18 2 12 2 4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        (877) 775-9657
+      </a>
     </nav>
-    <button class="burger" id="burger" aria-label="Toggle menu">
+    <button class="burger" id="burger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </div>
   <div class="mob-menu" id="mobMenu">
     <a href="#services">Services</a>
+    <a href="#about">About</a>
     <a href="#why">Why Us</a>
     <a href="#contact">Contact</a>
-    <a href="tel:8777759657" class="btn btn-orange">Call Now</a>
+    <a href="tel:8777759657" class="btn btn-primary">Call (877) 775-9657</a>
   </div>
 </header>
 
-<!-- ── HERO ── -->
+<!-- HERO -->
 <section class="hero" id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
+  <!-- metallic background layers -->
+  <div class="hero-base"></div>
+  <div class="hero-band"></div>
+  <div class="hero-sheen" id="heroSheen"></div>
+  <div class="hero-vignette"></div>
+
   <div class="container hero-content">
-    <p class="hero-eye">South Florida Fiber Optic</p>
-    <h1 class="hero-title">
-      Day Rate<br>
-      <span class="text-orange">Splicer &amp;</span><br>
-      Missiling Crews
+    <p class="hero-label reveal">South Florida · Fiber Optic Specialists</p>
+    <h1 class="hero-title" id="heroTitle">
+      Precision.<br>
+      <span class="hero-title-indent">Infrastructure.</span><br>
+      Delivered.
     </h1>
-    <p class="hero-sub">Reliable. Professional. On Time.</p>
-    <div class="hero-ctas">
-      <a href="#services" class="btn btn-orange">Our Services</a>
-      <a href="#contact" class="btn btn-outline">Get a Quote</a>
+    <p class="hero-sub reveal">
+      Licensed fiber optic installation, fusion splicing, and network infrastructure — built to last and delivered on time.
+    </p>
+    <div class="hero-ctas reveal">
+      <a href="#contact" class="btn btn-primary btn-lg">Request a Quote</a>
+      <a href="#services" class="btn btn-ghost btn-lg">Our Services</a>
     </div>
-    <div class="hero-stats">
-      <div class="stat">
-        <span class="stat-val">2-Man</span>
-        <span class="stat-lbl">Crews</span>
+  </div>
+
+  <div class="hero-proof">
+    <div class="container hero-proof-inner">
+      <div class="proof-item">
+        <span class="proof-val">100<span class="proof-plus">+</span></span>
+        <span class="proof-lbl">Miles Installed</span>
       </div>
-      <div class="stat-div"></div>
-      <div class="stat">
-        <span class="stat-val">Certified</span>
-        <span class="stat-lbl">Technicians</span>
+      <div class="proof-rule"></div>
+      <div class="proof-item">
+        <span class="proof-val">Licensed</span>
+        <span class="proof-lbl">&amp; Certified</span>
       </div>
-      <div class="stat-div"></div>
-      <div class="stat">
-        <span class="stat-val">S. Florida</span>
-        <span class="stat-lbl">Coverage</span>
+      <div class="proof-rule"></div>
+      <div class="proof-item">
+        <span class="proof-val">S. Florida</span>
+        <span class="proof-lbl">Coverage</span>
+      </div>
+      <div class="proof-rule"></div>
+      <div class="proof-item">
+        <span class="proof-val">24/7</span>
+        <span class="proof-lbl">Emergency Response</span>
       </div>
     </div>
   </div>
-  <div class="scroll-line"><span></span></div>
 </section>
 
-<!-- ── SERVICES ── -->
+<!-- SERVICES -->
 <section class="services" id="services">
   <div class="container">
     <div class="sec-hd reveal">
       <p class="sec-eye">What We Do</p>
-      <h2 class="sec-title">Our <span class="text-orange">Services</span></h2>
+      <h2 class="sec-title">Complete Fiber Optic Solutions</h2>
+      <p class="sec-desc">End-to-end fiber infrastructure for commercial, municipal, and enterprise clients.</p>
     </div>
     <div class="srv-grid">
 
-      <!-- Splicer -->
-      <div class="srv-card splicer reveal d1">
-        <div class="srv-img">
-          <div class="srv-img-fade"></div>
-          <div class="srv-lbl">Splicer Crews</div>
-        </div>
-        <div class="srv-body">
-          <div class="srv-rate">
-            <span class="rate-lbl">Splicer Hourly Rate</span>
-            <div class="rate-val text-orange">$25–$35<span class="rate-unit">/hr</span></div>
-          </div>
-          <h3 class="srv-title">2-Man Splicing Crew</h3>
-          <ul class="srv-tags">
-            <li>Fusion Splicing</li>
-            <li>Testing</li>
-            <li>QC</li>
-          </ul>
-          <ul class="srv-feat">
-            <li>
-              <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#FF6B00"/><path d="M5.5 10l3 3 6-6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Experienced &amp; Certified Techs
-            </li>
-            <li>
-              <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#FF6B00"/><path d="M5.5 10l3 3 6-6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Top-Tier Equipment
-            </li>
-            <li>
-              <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#FF6B00"/><path d="M5.5 10l3 3 6-6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Quality Workmanship
-            </li>
-          </ul>
-          <a href="#contact" class="btn btn-orange btn-full">Request a Crew</a>
-        </div>
+      <div class="srv-card reveal">
+        <div class="srv-num">01</div>
+        <h3>Fiber Optic Installation</h3>
+        <p>Aerial and underground fiber installation for commercial buildings, campuses, municipalities, and enterprise networks.</p>
+        <ul class="srv-tags">
+          <li>Aerial</li><li>Underground</li><li>OSP &amp; ISP</li>
+        </ul>
       </div>
 
-      <!-- Missiling -->
-      <div class="srv-card missiling reveal d2">
-        <div class="srv-img">
-          <div class="srv-img-fade"></div>
-          <div class="srv-lbl">Missiling Crews</div>
-        </div>
-        <div class="srv-body">
-          <div class="srv-rate">
-            <span class="rate-lbl">Missiling Day Rate</span>
-            <div class="rate-val text-cyan">$150–$225<span class="rate-unit">/day</span></div>
-          </div>
-          <h3 class="srv-title">2-Man Missiling Crew</h3>
-          <ul class="srv-tags">
-            <li>Conduit Missiling</li>
-            <li>Placement</li>
-            <li>Pull Prep</li>
-          </ul>
-          <ul class="srv-feat">
-            <li>
-              <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#00C8E0"/><path d="M5.5 10l3 3 6-6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Fast &amp; Efficient
-            </li>
-            <li>
-              <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#00C8E0"/><path d="M5.5 10l3 3 6-6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Safe &amp; Reliable
-            </li>
-            <li>
-              <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#00C8E0"/><path d="M5.5 10l3 3 6-6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Meets Industry Standards
-            </li>
-          </ul>
-          <a href="#contact" class="btn btn-cyan btn-full">Request a Crew</a>
-        </div>
+      <div class="srv-card reveal d1">
+        <div class="srv-num">02</div>
+        <h3>Fusion Splicing &amp; Testing</h3>
+        <p>Precision fusion splicing with full OTDR and ILM testing, certification, and documentation packages.</p>
+        <ul class="srv-tags">
+          <li>OTDR Testing</li><li>ILM Certified</li><li>Full Docs</li>
+        </ul>
+      </div>
+
+      <div class="srv-card reveal d2">
+        <div class="srv-num">03</div>
+        <h3>Conduit &amp; Missiling</h3>
+        <p>Expert conduit installation, missiling, and pull preparation engineered for future capacity and clean execution.</p>
+        <ul class="srv-tags">
+          <li>Conduit Install</li><li>Missiling</li><li>Pull Prep</li>
+        </ul>
+      </div>
+
+      <div class="srv-card reveal">
+        <div class="srv-num">04</div>
+        <h3>Network Infrastructure</h3>
+        <p>Structured cabling, data center fiber, and backbone network design and installation built for long-term scalability.</p>
+        <ul class="srv-tags">
+          <li>Structured Cabling</li><li>Data Centers</li><li>Backbone</li>
+        </ul>
+      </div>
+
+      <div class="srv-card reveal d1">
+        <div class="srv-num">05</div>
+        <h3>Quality &amp; Compliance</h3>
+        <p>Every project closed out with OTDR results, as-builts, QC reports, and sign-off packages for permit closeouts.</p>
+        <ul class="srv-tags">
+          <li>QC Reports</li><li>As-Builts</li><li>Code Compliant</li>
+        </ul>
+      </div>
+
+      <div class="srv-card reveal d2">
+        <div class="srv-num">06</div>
+        <h3>Emergency Services</h3>
+        <p>Network down? Rapid-response fiber repair and restoration to minimize downtime and get you back online fast.</p>
+        <ul class="srv-tags">
+          <li>Rapid Response</li><li>Fiber Repair</li><li>Restoration</li>
+        </ul>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ── SERVICE STRIP ── -->
-<div class="strip">
-  <div class="container strip-inner">
-    <span>Fiber Splicing</span>
-    <div class="strip-dot"></div>
-    <span>Missiling</span>
-    <div class="strip-dot"></div>
-    <span>Conduit Solutions</span>
-    <div class="strip-dot"></div>
-    <span>Testing &amp; QC</span>
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container about-inner">
+    <div class="about-img reveal">
+      <div class="about-logo-wrap">
+        <img src="logo2.png" alt="Lynks Inc" />
+      </div>
+      <blockquote class="about-quote">"From conduit to connection — we keep you linked."</blockquote>
+    </div>
+    <div class="about-text reveal d2">
+      <p class="sec-eye">Who We Are</p>
+      <h2 class="sec-title">South Florida's Trusted Fiber Experts</h2>
+      <p class="about-desc">Lynks Inc is a South Florida fiber optic company built on craftsmanship, precision, and reliability. We partner with contractors, municipalities, developers, and enterprises to design and deploy fiber networks that perform — the first time.</p>
+      <ul class="about-list">
+        <li><span class="chk">✓</span>Licensed &amp; fully insured</li>
+        <li><span class="chk">✓</span>Certified fusion splicing technicians</li>
+        <li><span class="chk">✓</span>OSHA-compliant job sites</li>
+        <li><span class="chk">✓</span>OTDR-tested and documented deliverables</li>
+        <li><span class="chk">✓</span>Serving all of South Florida</li>
+      </ul>
+    </div>
   </div>
-</div>
+</section>
 
-<!-- ── WHY US ── -->
+<!-- WHY -->
 <section class="why" id="why">
   <div class="container">
     <div class="sec-hd reveal">
       <p class="sec-eye">The Lynks Advantage</p>
-      <h2 class="sec-title">Why Choose <span class="text-cyan">Lynks Inc?</span></h2>
+      <h2 class="sec-title">Why Clients Choose Us</h2>
     </div>
     <div class="why-grid">
-
-      <div class="why-card reveal">
-        <div class="why-icon">
-          <svg viewBox="0 0 48 48" fill="none">
-            <circle cx="24" cy="24" r="22" stroke="#FF6B00" stroke-width="2"/>
-            <path d="M14 24l7 7 13-14" stroke="#FF6B00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <h3>Reliable &amp; Professional</h3>
-        <p>Every crew arrives prepared, equipped, and ready to deliver results you can count on.</p>
+      <div class="why-item reveal">
+        <div class="why-line"></div>
+        <h3>On-Time Delivery</h3>
+        <p>We treat your schedule like our own. Every project is planned and resourced to hit your deadlines without compromise.</p>
       </div>
-
-      <div class="why-card reveal d1">
-        <div class="why-icon">
-          <svg viewBox="0 0 48 48" fill="none">
-            <circle cx="24" cy="24" r="22" stroke="#FF6B00" stroke-width="2"/>
-            <circle cx="24" cy="24" r="8" stroke="#FF6B00" stroke-width="2"/>
-            <path d="M24 8v4M24 36v4M8 24h4M36 24h4" stroke="#FF6B00" stroke-width="2" stroke-linecap="round"/>
-            <path d="M24 24V16M24 24l5 3" stroke="#FF6B00" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <h3>On-Time Every Time</h3>
-        <p>Schedules matter. We show up when you need us and stay until the job is done right.</p>
+      <div class="why-item reveal d1">
+        <div class="why-line"></div>
+        <h3>Certified Technicians</h3>
+        <p>Trained, certified crews equipped with top-tier fusion splicing and testing equipment — right the first time.</p>
       </div>
-
-      <div class="why-card reveal d2">
-        <div class="why-icon">
-          <svg viewBox="0 0 48 48" fill="none">
-            <path d="M24 4l5 10h11l-9 7 3 11-10-7-10 7 3-11-9-7h11z" stroke="#FF6B00" stroke-width="2" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <h3>Quality Guaranteed</h3>
-        <p>Certified technicians and top-tier equipment ensure every splice meets spec, every time.</p>
+      <div class="why-item reveal d2">
+        <div class="why-line"></div>
+        <h3>Full Documentation</h3>
+        <p>OTDR results, as-builts, and QC reports on every job. Clean handoffs that satisfy inspectors and clients.</p>
       </div>
-
-      <div class="why-card reveal d1">
-        <div class="why-icon">
-          <svg viewBox="0 0 48 48" fill="none">
-            <path d="M24 6l14 8v12c0 8-6 15-14 18C16 41 10 34 10 26V14z" stroke="#FF6B00" stroke-width="2" stroke-linejoin="round"/>
-            <path d="M18 24l4 4 8-8" stroke="#FF6B00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <h3>Safety Focused</h3>
-        <p>Industry-standard safety practices protect your site, your crew, and your timeline.</p>
+      <div class="why-item reveal">
+        <div class="why-line"></div>
+        <h3>Safety First</h3>
+        <p>OSHA-aligned practices, 811 compliance, and proper traffic control on every site protect people and property.</p>
       </div>
-
-      <div class="why-card reveal d2 span-2">
-        <div class="why-icon">
-          <svg viewBox="0 0 48 48" fill="none">
-            <path d="M10 36c0-8 6-14 14-14s14 6 14 14" stroke="#FF6B00" stroke-width="2" stroke-linecap="round"/>
-            <circle cx="24" cy="18" r="6" stroke="#FF6B00" stroke-width="2"/>
-            <path d="M6 38h36" stroke="#FF6B00" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <h3>Proudly Serving South Florida</h3>
-        <p>Local expertise and regional knowledge mean faster response and zero learning curve on your job site.</p>
+      <div class="why-item reveal d1">
+        <div class="why-line"></div>
+        <h3>Local Expertise</h3>
+        <p>We know South Florida's terrain, permitting, and utilities — that knowledge saves you time and money.</p>
       </div>
-
+      <div class="why-item reveal d2">
+        <div class="why-line"></div>
+        <h3>Any Scale</h3>
+        <p>One building or a regional backbone — we scope, plan, and execute at any scale with the same attention to detail.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ── CTA BAND ── -->
+<!-- CTA -->
 <section class="cta-band">
-  <div class="container cta-inner">
-    <div class="cta-text reveal">
-      <h2>Let's Put Footage <span class="text-orange">In The Ground!</span></h2>
-      <p>From conduit to connection — we keep you linked.</p>
+  <div class="container cta-inner reveal">
+    <div>
+      <h2 class="cta-title">Ready to Build Your Network?</h2>
+      <p class="cta-sub">Send us your scope and get a clear, itemized proposal — usually same business day.</p>
     </div>
-    <div class="cta-btns reveal d2">
-      <a href="tel:8777759657" class="btn btn-orange btn-lg">
+    <div class="cta-actions">
+      <a href="tel:8777759657" class="btn btn-primary btn-lg">
         <svg viewBox="0 0 20 20" fill="none"><path d="M3 3h4l2 5-2.5 1.5A11 11 0 0012.5 13.5L14 11l5 2v4a1 1 0 01-1 1C8 18 2 12 2 4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         (877) 775-9657
       </a>
-      <a href="mailto:info@lynksinc.com" class="btn btn-outline btn-lg">info@lynksinc.com</a>
+      <a href="mailto:info@lynksinc.com" class="btn btn-ghost btn-lg">info@lynksinc.com</a>
     </div>
   </div>
 </section>
 
-<!-- ── CONTACT ── -->
+<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="container contact-inner">
 
-    <div class="reveal">
+    <div class="contact-info reveal">
       <p class="sec-eye">Get In Touch</p>
-      <h2 class="sec-title">Contact <span class="text-orange">Us Today</span></h2>
-      <p class="contact-desc">Ready to schedule a crew or get a quote? Reach out — we respond fast.</p>
+      <h2 class="sec-title">Let's Talk About<br>Your Project</h2>
+      <p class="contact-desc">Have a project in mind? We respond with a clear proposal — usually the same business day.</p>
       <ul class="contact-list">
         <li>
-          <div class="ci ci-orange">
-            <svg viewBox="0 0 20 20" fill="none"><path d="M3 3h4l2 5-2.5 1.5A11 11 0 0012.5 13.5L14 11l5 2v4a1 1 0 01-1 1C8 18 2 12 2 4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
+          <div class="ci"><svg viewBox="0 0 20 20" fill="none"><path d="M3 3h4l2 5-2.5 1.5A11 11 0 0012.5 13.5L14 11l5 2v4a1 1 0 01-1 1C8 18 2 12 2 4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <div>
             <span class="c-lbl">Toll Free</span>
             <a href="tel:8777759657">(877) 775-9657</a>
@@ -279,120 +263,124 @@
           </div>
         </li>
         <li>
-          <div class="ci ci-cyan">
-            <svg viewBox="0 0 20 20" fill="none"><path d="M3 3h4l2 5-2.5 1.5A11 11 0 0012.5 13.5L14 11l5 2v4a1 1 0 01-1 1C8 18 2 12 2 4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
+          <div class="ci"><svg viewBox="0 0 20 20" fill="none"><path d="M3 3h4l2 5-2.5 1.5A11 11 0 0012.5 13.5L14 11l5 2v4a1 1 0 01-1 1C8 18 2 12 2 4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <div>
             <span class="c-lbl">Cell</span>
             <a href="tel:7863844542">786-384-4542</a>
           </div>
         </li>
         <li>
-          <div class="ci ci-orange">
-            <svg viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="13" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M2 7l8 5 8-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-          </div>
+          <div class="ci"><svg viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="13" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M2 7l8 5 8-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
           <div>
             <span class="c-lbl">Email</span>
             <a href="mailto:info@lynksinc.com">info@lynksinc.com</a>
           </div>
         </li>
         <li>
-          <div class="ci ci-cyan">
-            <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M2 10h16M10 2a14 14 0 010 16M10 2a14 14 0 000 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-          </div>
+          <div class="ci"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M2 10h16M10 2a14 14 0 010 16M10 2a14 14 0 000 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
           <div>
             <span class="c-lbl">Website</span>
             <a href="http://www.lynksinc.com" target="_blank" rel="noopener">www.lynksinc.com</a>
           </div>
         </li>
       </ul>
-    </div>
-
-    <div class="cform reveal d2" id="cform">
-      <h3>Request a Quote</h3>
-      <div class="frow">
-        <div class="fg">
-          <label for="fname">Full Name</label>
-          <input type="text" id="fname" placeholder="John Smith" required />
-        </div>
-        <div class="fg">
-          <label for="fco">Company</label>
-          <input type="text" id="fco" placeholder="Your Company" />
+      <div class="social-row">
+        <span class="social-lbl">Follow Us</span>
+        <div class="social-icons">
+          <a href="#" class="soc-icon" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="#" class="soc-icon" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="soc-icon" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
         </div>
       </div>
+    </div>
+
+    <form class="cform reveal d2" id="cform" novalidate>
+      <h3>Request a Quote</h3>
       <div class="frow">
-        <div class="fg">
-          <label for="fph">Phone</label>
-          <input type="tel" id="fph" placeholder="(555) 000-0000" required />
-        </div>
-        <div class="fg">
-          <label for="fem">Email</label>
-          <input type="email" id="fem" placeholder="you@company.com" required />
-        </div>
+        <div class="fg"><label for="fname">Full Name</label><input type="text" id="fname" placeholder="John Smith" required /></div>
+        <div class="fg"><label for="fco">Company</label><input type="text" id="fco" placeholder="Your Company" /></div>
+      </div>
+      <div class="frow">
+        <div class="fg"><label for="fph">Phone</label><input type="tel" id="fph" placeholder="(555) 000-0000" required /></div>
+        <div class="fg"><label for="fem">Email</label><input type="email" id="fem" placeholder="you@company.com" required /></div>
       </div>
       <div class="fg">
         <label for="fsv">Service Needed</label>
         <select id="fsv">
           <option value="">Select a service…</option>
-          <option>Splicer Crew</option>
-          <option>Missiling Crew</option>
-          <option>Both Services</option>
+          <option>Fiber Optic Installation</option>
+          <option>Fusion Splicing &amp; Testing</option>
+          <option>Conduit &amp; Missiling</option>
+          <option>Network Infrastructure</option>
+          <option>Emergency / Rush Service</option>
           <option>Other / Not Sure</option>
         </select>
       </div>
       <div class="fg">
         <label for="fmsg">Project Details</label>
-        <textarea id="fmsg" rows="4" placeholder="Describe your project, location, timeline…"></textarea>
+        <textarea id="fmsg" rows="4" placeholder="Describe your project, location, scope, and timeline…"></textarea>
       </div>
-      <button class="btn btn-orange btn-full btn-lg" id="fsubmit">Send Request</button>
-      <p class="f-note">We typically respond within a few hours during business hours.</p>
+      <button type="button" class="btn btn-primary btn-full btn-lg" id="fsubmit">Send Request</button>
+      <p class="f-note">We typically respond within the same business day.</p>
       <div class="f-success" id="fsuccess">
-        <svg viewBox="0 0 24 24" fill="none">
-          <circle cx="12" cy="12" r="10" stroke="#00C8E0" stroke-width="2"/>
-          <path d="M7 12l3 3 7-7" stroke="#00C8E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <p>Message sent! We'll be in touch shortly.</p>
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#c8a96e" stroke-width="1.5"/><path d="M7 12l3 3 7-7" stroke="#c8a96e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p>Message sent. We'll be in touch shortly.</p>
       </div>
-    </div>
+    </form>
 
   </div>
 </section>
 
-<!-- ── FOOTER ── -->
+<!-- FOOTER -->
 <footer class="footer">
   <div class="container foot-inner">
     <div class="foot-brand">
       <div class="foot-logo">
-        <img src="lynkslogo.jpg" alt="Lynks Inc" class="foot-logo-img" />
-        <div>
-          <div class="logo-name">LYNKS INC</div>
-          <span class="logo-sub">A Fiber Optics Company</span>
-        </div>
+        <img src="logo2.png" alt="Lynks Inc" class="foot-logo-img" />
       </div>
       <p class="foot-tagline">From conduit to connection — we keep you linked.</p>
+      <div class="foot-social">
+        <a href="#" class="soc-icon" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="#" class="soc-icon" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="#" class="soc-icon" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+      </div>
     </div>
     <div>
       <h4>Services</h4>
-      <ul class="foot-srv">
-        <li>Fiber Splicing</li>
-        <li>Missiling</li>
-        <li>Conduit Solutions</li>
-        <li>Testing &amp; QC</li>
+      <ul class="foot-list">
+        <li>Fiber Optic Installation</li>
+        <li>Fusion Splicing &amp; Testing</li>
+        <li>Conduit &amp; Missiling</li>
+        <li>Network Infrastructure</li>
+        <li>Quality &amp; Compliance</li>
+        <li>Emergency Services</li>
       </ul>
     </div>
     <div>
       <h4>Contact</h4>
       <div class="foot-ct">
-        <p><a href="tel:8777759657">(877) 775-9657</a></p>
-        <p><a href="tel:7863844542">786-384-4542</a></p>
-        <p><a href="mailto:info@lynksinc.com">info@lynksinc.com</a></p>
-        <p><a href="http://www.lynksinc.com" target="_blank" rel="noopener">www.lynksinc.com</a></p>
+        <a href="tel:8777759657">(877) 775-9657</a>
+        <a href="tel:8777795657">(877) 77-LYNKS</a>
+        <a href="tel:7863844542">786-384-4542</a>
+        <a href="mailto:info@lynksinc.com">info@lynksinc.com</a>
+        <a href="http://www.lynksinc.com" target="_blank" rel="noopener">www.lynksinc.com</a>
       </div>
     </div>
   </div>
   <div class="foot-bot">
-    <div class="container">
-      <p>&copy; <span id="yr"></span> Lynks Inc. All rights reserved. &nbsp;|&nbsp; South Florida</p>
+    <div class="container foot-bot-inner">
+      <p>&copy; <span id="yr"></span> Lynks Inc. All rights reserved. &nbsp;·&nbsp; South Florida</p>
+      <div class="foot-bot-soc">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+      </div>
     </div>
   </div>
 </footer>
