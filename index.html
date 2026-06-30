@@ -12,6 +12,17 @@
 </head>
 <body>
 
+<!-- HIRE BANNER -->
+<div class="hire-banner" id="hireBanner">
+  <p class="hire-txt">
+    <strong>Now Hiring</strong>&ensp;·&ensp;Splicer &amp; Missiling Crews · South Florida
+    <a href="hiring.html" class="hire-link">See Open Positions →</a>
+  </p>
+  <button class="hire-close" id="hireClose" aria-label="Close">
+    <svg viewBox="0 0 12 12" width="10" height="10" fill="none"><path d="M1 1l10 10M11 1L1 11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+</div>
+
 <!-- NAV -->
 <header class="nav" id="nav">
   <div class="container nav-inner">
@@ -19,14 +30,15 @@
       <img src="logo2.png" alt="Lynks Inc" class="nav-logo-img" />
       <div>
         <div class="logo-name">LYNKS INC</div>
-        <div class="logo-sub">Fiber Optic Company</div>
+        <div class="logo-sub" data-i18n="logo-sub">Fiber Optic Company</div>
       </div>
     </a>
     <nav class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#why">Why Us</a>
-      <a href="#contact">Contact</a>
+      <a href="#services" data-i18n="nav-services">Services</a>
+      <a href="#about" data-i18n="nav-about">About</a>
+      <a href="#why" data-i18n="nav-why">Why Us</a>
+      <a href="#contact" data-i18n="nav-contact">Contact</a>
+      <button class="lang-toggle" id="langBtn" aria-label="Switch language">ES</button>
       <a href="tel:8777759657" class="btn btn-primary">
         <svg viewBox="0 0 20 20" fill="none"><path d="M3 3h4l2 5-2.5 1.5A11 11 0 0012.5 13.5L14 11l5 2v4a1 1 0 01-1 1C8 18 2 12 2 4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         (877) 775-9657
@@ -37,11 +49,12 @@
     </button>
   </div>
   <div class="mob-menu" id="mobMenu">
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#why">Why Us</a>
-    <a href="#contact">Contact</a>
+    <a href="#services" data-i18n="mob-services">Services</a>
+    <a href="#about" data-i18n="mob-about">About</a>
+    <a href="#why" data-i18n="mob-why">Why Us</a>
+    <a href="#contact" data-i18n="mob-contact">Contact</a>
     <a href="tel:8777759657" class="btn btn-primary">Call (877) 775-9657</a>
+    <button class="lang-toggle lang-toggle-mob" id="langBtnMob" aria-label="Switch language">ES</button>
   </div>
 </header>
 
@@ -54,18 +67,18 @@
   <div class="hero-vignette"></div>
 
   <div class="container hero-content">
-    <p class="hero-label reveal">South Florida · Fiber Optic Specialists</p>
-    <h1 class="hero-title" id="heroTitle">
+    <p class="hero-label reveal" data-i18n="hero-label">South Florida · Fiber Optic Specialists</p>
+    <h1 class="hero-title" id="heroTitle" data-i18n="hero-title">
       Precision.<br>
       <span class="hero-title-indent">Infrastructure.</span><br>
       Delivered.
     </h1>
-    <p class="hero-sub reveal">
+    <p class="hero-sub reveal" data-i18n="hero-sub">
       Licensed fiber optic installation, fusion splicing, and network infrastructure — built to last and delivered on time.
     </p>
     <div class="hero-ctas reveal">
-      <a href="#contact" class="btn btn-primary btn-lg">Request a Quote</a>
-      <a href="#services" class="btn btn-ghost btn-lg">Our Services</a>
+      <a href="#contact" class="btn btn-primary btn-lg" data-i18n="hero-cta-quote">Request a Quote</a>
+      <a href="#services" class="btn btn-ghost btn-lg" data-i18n="hero-cta-svc">Our Services</a>
     </div>
   </div>
 
@@ -73,22 +86,22 @@
     <div class="container hero-proof-inner">
       <div class="proof-item">
         <span class="proof-val">100<span class="proof-plus">+</span></span>
-        <span class="proof-lbl">Miles Installed</span>
+        <span class="proof-lbl" data-i18n="proof-lbl-1">Miles Installed</span>
       </div>
       <div class="proof-rule"></div>
       <div class="proof-item">
-        <span class="proof-val">Licensed</span>
-        <span class="proof-lbl">&amp; Certified</span>
+        <span class="proof-val" data-i18n="proof-val-2">Licensed</span>
+        <span class="proof-lbl" data-i18n="proof-lbl-2">&amp; Certified</span>
       </div>
       <div class="proof-rule"></div>
       <div class="proof-item">
-        <span class="proof-val">S. Florida</span>
-        <span class="proof-lbl">Coverage</span>
+        <span class="proof-val" data-i18n="proof-val-3">S. Florida</span>
+        <span class="proof-lbl" data-i18n="proof-lbl-3">Coverage</span>
       </div>
       <div class="proof-rule"></div>
       <div class="proof-item">
         <span class="proof-val">24/7</span>
-        <span class="proof-lbl">Emergency Response</span>
+        <span class="proof-lbl" data-i18n="proof-lbl-4">Emergency Response</span>
       </div>
     </div>
   </div>
@@ -98,63 +111,63 @@
 <section class="services" id="services">
   <div class="container">
     <div class="sec-hd reveal">
-      <p class="sec-eye">What We Do</p>
-      <h2 class="sec-title">Complete Fiber Optic Solutions</h2>
-      <p class="sec-desc">End-to-end fiber infrastructure for commercial, municipal, and enterprise clients.</p>
+      <p class="sec-eye" data-i18n="srv-eye">What We Do</p>
+      <h2 class="sec-title" data-i18n="srv-title">Complete Fiber Optic Solutions</h2>
+      <p class="sec-desc" data-i18n="srv-desc">End-to-end fiber infrastructure for commercial, municipal, and enterprise clients.</p>
     </div>
     <div class="srv-grid">
 
       <div class="srv-card reveal">
         <div class="srv-num">01</div>
-        <h3>Fiber Optic Installation</h3>
-        <p>Aerial and underground fiber installation for commercial buildings, campuses, municipalities, and enterprise networks.</p>
+        <h3 data-i18n="srv1-h">Fiber Optic Installation</h3>
+        <p data-i18n="srv1-p">Aerial and underground fiber installation for commercial buildings, campuses, municipalities, and enterprise networks.</p>
         <ul class="srv-tags">
-          <li>Aerial</li><li>Underground</li><li>OSP &amp; ISP</li>
+          <li data-i18n="srv1-t1">Aerial</li><li data-i18n="srv1-t2">Underground</li><li data-i18n="srv1-t3">OSP &amp; ISP</li>
         </ul>
       </div>
 
       <div class="srv-card reveal d1">
         <div class="srv-num">02</div>
-        <h3>Fusion Splicing &amp; Testing</h3>
-        <p>Precision fusion splicing with full OTDR and ILM testing, certification, and documentation packages.</p>
+        <h3 data-i18n="srv2-h">Fusion Splicing &amp; Testing</h3>
+        <p data-i18n="srv2-p">Precision fusion splicing with full OTDR and ILM testing, certification, and documentation packages.</p>
         <ul class="srv-tags">
-          <li>OTDR Testing</li><li>ILM Certified</li><li>Full Docs</li>
+          <li data-i18n="srv2-t1">OTDR Testing</li><li data-i18n="srv2-t2">ILM Certified</li><li data-i18n="srv2-t3">Full Docs</li>
         </ul>
       </div>
 
       <div class="srv-card reveal d2">
         <div class="srv-num">03</div>
-        <h3>Conduit &amp; Missiling</h3>
-        <p>Expert conduit installation, missiling, and pull preparation engineered for future capacity and clean execution.</p>
+        <h3 data-i18n="srv3-h">Conduit &amp; Missiling</h3>
+        <p data-i18n="srv3-p">Expert conduit installation, missiling, and pull preparation engineered for future capacity and clean execution.</p>
         <ul class="srv-tags">
-          <li>Conduit Install</li><li>Missiling</li><li>Pull Prep</li>
+          <li data-i18n="srv3-t1">Conduit Install</li><li data-i18n="srv3-t2">Missiling</li><li data-i18n="srv3-t3">Pull Prep</li>
         </ul>
       </div>
 
       <div class="srv-card reveal">
         <div class="srv-num">04</div>
-        <h3>Network Infrastructure</h3>
-        <p>Structured cabling, data center fiber, and backbone network design and installation built for long-term scalability.</p>
+        <h3 data-i18n="srv4-h">Network Infrastructure</h3>
+        <p data-i18n="srv4-p">Structured cabling, data center fiber, and backbone network design and installation built for long-term scalability.</p>
         <ul class="srv-tags">
-          <li>Structured Cabling</li><li>Data Centers</li><li>Backbone</li>
+          <li data-i18n="srv4-t1">Structured Cabling</li><li data-i18n="srv4-t2">Data Centers</li><li data-i18n="srv4-t3">Backbone</li>
         </ul>
       </div>
 
       <div class="srv-card reveal d1">
         <div class="srv-num">05</div>
-        <h3>Quality &amp; Compliance</h3>
-        <p>Every project closed out with OTDR results, as-builts, QC reports, and sign-off packages for permit closeouts.</p>
+        <h3 data-i18n="srv5-h">Quality &amp; Compliance</h3>
+        <p data-i18n="srv5-p">Every project closed out with OTDR results, as-builts, QC reports, and sign-off packages for permit closeouts.</p>
         <ul class="srv-tags">
-          <li>QC Reports</li><li>As-Builts</li><li>Code Compliant</li>
+          <li data-i18n="srv5-t1">QC Reports</li><li data-i18n="srv5-t2">As-Builts</li><li data-i18n="srv5-t3">Code Compliant</li>
         </ul>
       </div>
 
       <div class="srv-card reveal d2">
         <div class="srv-num">06</div>
-        <h3>Emergency Services</h3>
-        <p>Network down? Rapid-response fiber repair and restoration to minimize downtime and get you back online fast.</p>
+        <h3 data-i18n="srv6-h">Emergency Services</h3>
+        <p data-i18n="srv6-p">Network down? Rapid-response fiber repair and restoration to minimize downtime and get you back online fast.</p>
         <ul class="srv-tags">
-          <li>Rapid Response</li><li>Fiber Repair</li><li>Restoration</li>
+          <li data-i18n="srv6-t1">Rapid Response</li><li data-i18n="srv6-t2">Fiber Repair</li><li data-i18n="srv6-t3">Restoration</li>
         </ul>
       </div>
 
@@ -169,18 +182,18 @@
       <div class="about-logo-wrap">
         <img src="logo2.png" alt="Lynks Inc" />
       </div>
-      <blockquote class="about-quote">"From conduit to connection — we keep you linked."</blockquote>
+      <blockquote class="about-quote" data-i18n="about-quote">"From conduit to connection — we keep you linked."</blockquote>
     </div>
     <div class="about-text reveal d2">
-      <p class="sec-eye">Who We Are</p>
-      <h2 class="sec-title">South Florida's Trusted Fiber Experts</h2>
-      <p class="about-desc">Lynks Inc is a South Florida fiber optic company built on craftsmanship, precision, and reliability. We partner with contractors, municipalities, developers, and enterprises to design and deploy fiber networks that perform — the first time.</p>
+      <p class="sec-eye" data-i18n="about-eye">Who We Are</p>
+      <h2 class="sec-title" data-i18n="about-title">South Florida's Trusted Fiber Experts</h2>
+      <p class="about-desc" data-i18n="about-desc">Lynks Inc is a South Florida fiber optic company built on craftsmanship, precision, and reliability. We partner with contractors, municipalities, developers, and enterprises to design and deploy fiber networks that perform — the first time.</p>
       <ul class="about-list">
-        <li><span class="chk">✓</span>Licensed &amp; fully insured</li>
-        <li><span class="chk">✓</span>Certified fusion splicing technicians</li>
-        <li><span class="chk">✓</span>OSHA-compliant job sites</li>
-        <li><span class="chk">✓</span>OTDR-tested and documented deliverables</li>
-        <li><span class="chk">✓</span>Serving all of South Florida</li>
+        <li data-i18n="about-li1"><span class="chk">✓</span>Licensed &amp; fully insured</li>
+        <li data-i18n="about-li2"><span class="chk">✓</span>Certified fusion splicing technicians</li>
+        <li data-i18n="about-li3"><span class="chk">✓</span>OSHA-compliant job sites</li>
+        <li data-i18n="about-li4"><span class="chk">✓</span>OTDR-tested and documented deliverables</li>
+        <li data-i18n="about-li5"><span class="chk">✓</span>Serving all of South Florida</li>
       </ul>
     </div>
   </div>
@@ -190,39 +203,39 @@
 <section class="why" id="why">
   <div class="container">
     <div class="sec-hd reveal">
-      <p class="sec-eye">The Lynks Advantage</p>
-      <h2 class="sec-title">Why Clients Choose Us</h2>
+      <p class="sec-eye" data-i18n="why-eye">The Lynks Advantage</p>
+      <h2 class="sec-title" data-i18n="why-title">Why Clients Choose Us</h2>
     </div>
     <div class="why-grid">
       <div class="why-item reveal">
         <div class="why-line"></div>
-        <h3>On-Time Delivery</h3>
-        <p>We treat your schedule like our own. Every project is planned and resourced to hit your deadlines without compromise.</p>
+        <h3 data-i18n="why1-h">On-Time Delivery</h3>
+        <p data-i18n="why1-p">We treat your schedule like our own. Every project is planned and resourced to hit your deadlines without compromise.</p>
       </div>
       <div class="why-item reveal d1">
         <div class="why-line"></div>
-        <h3>Certified Technicians</h3>
-        <p>Trained, certified crews equipped with top-tier fusion splicing and testing equipment — right the first time.</p>
+        <h3 data-i18n="why2-h">Certified Technicians</h3>
+        <p data-i18n="why2-p">Trained, certified crews equipped with top-tier fusion splicing and testing equipment — right the first time.</p>
       </div>
       <div class="why-item reveal d2">
         <div class="why-line"></div>
-        <h3>Full Documentation</h3>
-        <p>OTDR results, as-builts, and QC reports on every job. Clean handoffs that satisfy inspectors and clients.</p>
+        <h3 data-i18n="why3-h">Full Documentation</h3>
+        <p data-i18n="why3-p">OTDR results, as-builts, and QC reports on every job. Clean handoffs that satisfy inspectors and clients.</p>
       </div>
       <div class="why-item reveal">
         <div class="why-line"></div>
-        <h3>Safety First</h3>
-        <p>OSHA-aligned practices, 811 compliance, and proper traffic control on every site protect people and property.</p>
+        <h3 data-i18n="why4-h">Safety First</h3>
+        <p data-i18n="why4-p">OSHA-aligned practices, 811 compliance, and proper traffic control on every site protect people and property.</p>
       </div>
       <div class="why-item reveal d1">
         <div class="why-line"></div>
-        <h3>Local Expertise</h3>
-        <p>We know South Florida's terrain, permitting, and utilities — that knowledge saves you time and money.</p>
+        <h3 data-i18n="why5-h">Local Expertise</h3>
+        <p data-i18n="why5-p">We know South Florida's terrain, permitting, and utilities — that knowledge saves you time and money.</p>
       </div>
       <div class="why-item reveal d2">
         <div class="why-line"></div>
-        <h3>Any Scale</h3>
-        <p>One building or a regional backbone — we scope, plan, and execute at any scale with the same attention to detail.</p>
+        <h3 data-i18n="why6-h">Any Scale</h3>
+        <p data-i18n="why6-p">One building or a regional backbone — we scope, plan, and execute at any scale with the same attention to detail.</p>
       </div>
     </div>
   </div>
@@ -232,8 +245,8 @@
 <section class="cta-band">
   <div class="container cta-inner reveal">
     <div>
-      <h2 class="cta-title">Ready to Build Your Network?</h2>
-      <p class="cta-sub">Send us your scope and get a clear, itemized proposal — usually same business day.</p>
+      <h2 class="cta-title" data-i18n="cta-title">Ready to Build Your Network?</h2>
+      <p class="cta-sub" data-i18n="cta-sub">Send us your scope and get a clear, itemized proposal — usually same business day.</p>
     </div>
     <div class="cta-actions">
       <a href="tel:8777759657" class="btn btn-primary btn-lg">
@@ -250,14 +263,14 @@
   <div class="container contact-inner">
 
     <div class="contact-info reveal">
-      <p class="sec-eye">Get In Touch</p>
-      <h2 class="sec-title">Let's Talk About<br>Your Project</h2>
-      <p class="contact-desc">Have a project in mind? We respond with a clear proposal — usually the same business day.</p>
+      <p class="sec-eye" data-i18n="ct-eye">Get In Touch</p>
+      <h2 class="sec-title" data-i18n="ct-title">Let's Talk About<br>Your Project</h2>
+      <p class="contact-desc" data-i18n="ct-desc">Have a project in mind? We respond with a clear proposal — usually the same business day.</p>
       <ul class="contact-list">
         <li>
           <div class="ci"><svg viewBox="0 0 20 20" fill="none"><path d="M3 3h4l2 5-2.5 1.5A11 11 0 0012.5 13.5L14 11l5 2v4a1 1 0 01-1 1C8 18 2 12 2 4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <div>
-            <span class="c-lbl">Toll Free</span>
+            <span class="c-lbl" data-i18n="ct-lbl-tollfree">Toll Free</span>
             <a href="tel:8777759657">(877) 775-9657</a>
             <a href="tel:8777795657" class="c-small">(877) 77-LYNKS</a>
           </div>
@@ -265,27 +278,27 @@
         <li>
           <div class="ci"><svg viewBox="0 0 20 20" fill="none"><path d="M3 3h4l2 5-2.5 1.5A11 11 0 0012.5 13.5L14 11l5 2v4a1 1 0 01-1 1C8 18 2 12 2 4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <div>
-            <span class="c-lbl">Cell</span>
+            <span class="c-lbl" data-i18n="ct-lbl-cell">Cell</span>
             <a href="tel:7863844542">786-384-4542</a>
           </div>
         </li>
         <li>
           <div class="ci"><svg viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="13" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M2 7l8 5 8-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
           <div>
-            <span class="c-lbl">Email</span>
+            <span class="c-lbl" data-i18n="ct-lbl-email">Email</span>
             <a href="mailto:info@lynksinc.com">info@lynksinc.com</a>
           </div>
         </li>
         <li>
           <div class="ci"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M2 10h16M10 2a14 14 0 010 16M10 2a14 14 0 000 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
           <div>
-            <span class="c-lbl">Website</span>
+            <span class="c-lbl" data-i18n="ct-lbl-web">Website</span>
             <a href="http://www.lynksinc.com" target="_blank" rel="noopener">www.lynksinc.com</a>
           </div>
         </li>
       </ul>
       <div class="social-row">
-        <span class="social-lbl">Follow Us</span>
+        <span class="social-lbl" data-i18n="social-lbl">Follow Us</span>
         <div class="social-icons">
           <a href="#" class="soc-icon" aria-label="Facebook" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
@@ -300,19 +313,21 @@
       </div>
     </div>
 
-    <form class="cform reveal d2" id="cform" novalidate>
-      <h3>Request a Quote</h3>
+    <form class="cform reveal d2" id="cform" name="contact" method="POST" netlify data-netlify-honeypot="bot-field" novalidate>
+      <input type="hidden" name="form-name" value="contact" />
+      <div style="display:none"><input name="bot-field" /></div>
+      <h3 data-i18n="form-title">Request a Quote</h3>
       <div class="frow">
-        <div class="fg"><label for="fname">Full Name</label><input type="text" id="fname" placeholder="John Smith" required /></div>
-        <div class="fg"><label for="fco">Company</label><input type="text" id="fco" placeholder="Your Company" /></div>
+        <div class="fg"><label for="fname" data-i18n="lbl-fname">Full Name</label><input type="text" id="fname" name="name" placeholder="John Smith" data-i18n-ph="ph-fname" required /></div>
+        <div class="fg"><label for="fco" data-i18n="lbl-fco">Company</label><input type="text" id="fco" name="company" placeholder="Your Company" data-i18n-ph="ph-fco" /></div>
       </div>
       <div class="frow">
-        <div class="fg"><label for="fph">Phone</label><input type="tel" id="fph" placeholder="(555) 000-0000" required /></div>
-        <div class="fg"><label for="fem">Email</label><input type="email" id="fem" placeholder="you@company.com" required /></div>
+        <div class="fg"><label for="fph" data-i18n="lbl-fph">Phone</label><input type="tel" id="fph" name="phone" placeholder="(555) 000-0000" required /></div>
+        <div class="fg"><label for="fem" data-i18n="lbl-fem">Email</label><input type="email" id="fem" name="email" placeholder="you@company.com" required /></div>
       </div>
       <div class="fg">
-        <label for="fsv">Service Needed</label>
-        <select id="fsv">
+        <label for="fsv" data-i18n="lbl-fsv">Service Needed</label>
+        <select id="fsv" name="service" data-i18n-select="fsv">
           <option value="">Select a service…</option>
           <option>Fiber Optic Installation</option>
           <option>Fusion Splicing &amp; Testing</option>
@@ -323,14 +338,14 @@
         </select>
       </div>
       <div class="fg">
-        <label for="fmsg">Project Details</label>
-        <textarea id="fmsg" rows="4" placeholder="Describe your project, location, scope, and timeline…"></textarea>
+        <label for="fmsg" data-i18n="lbl-fmsg">Project Details</label>
+        <textarea id="fmsg" name="message" rows="4" placeholder="Describe your project, location, scope, and timeline…" data-i18n-ph="ph-fmsg"></textarea>
       </div>
-      <button type="button" class="btn btn-primary btn-full btn-lg" id="fsubmit">Send Request</button>
-      <p class="f-note">We typically respond within the same business day.</p>
+      <button type="button" class="btn btn-primary btn-full btn-lg" id="fsubmit" data-i18n="fsubmit">Send Request</button>
+      <p class="f-note" data-i18n="f-note">We typically respond within the same business day.</p>
       <div class="f-success" id="fsuccess">
         <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#c8a96e" stroke-width="1.5"/><path d="M7 12l3 3 7-7" stroke="#c8a96e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <p>Message sent. We'll be in touch shortly.</p>
+        <p data-i18n="f-success">Message sent. We'll be in touch shortly.</p>
       </div>
     </form>
 
@@ -344,7 +359,8 @@
       <div class="foot-logo">
         <img src="logo2.png" alt="Lynks Inc" class="foot-logo-img" />
       </div>
-      <p class="foot-tagline">From conduit to connection — we keep you linked.</p>
+      <a href="hiring.html" class="foot-hire-badge"><span class="hire-dot"></span>Now Hiring</a>
+      <p class="foot-tagline" data-i18n="foot-tagline">From conduit to connection — we keep you linked.</p>
       <div class="foot-social">
         <a href="#" class="soc-icon" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
         <a href="#" class="soc-icon" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
@@ -352,18 +368,18 @@
       </div>
     </div>
     <div>
-      <h4>Services</h4>
+      <h4 data-i18n="foot-svc-h">Services</h4>
       <ul class="foot-list">
-        <li>Fiber Optic Installation</li>
-        <li>Fusion Splicing &amp; Testing</li>
-        <li>Conduit &amp; Missiling</li>
-        <li>Network Infrastructure</li>
-        <li>Quality &amp; Compliance</li>
-        <li>Emergency Services</li>
+        <li data-i18n="foot-svc-1">Fiber Optic Installation</li>
+        <li data-i18n="foot-svc-2">Fusion Splicing &amp; Testing</li>
+        <li data-i18n="foot-svc-3">Conduit &amp; Missiling</li>
+        <li data-i18n="foot-svc-4">Network Infrastructure</li>
+        <li data-i18n="foot-svc-5">Quality &amp; Compliance</li>
+        <li data-i18n="foot-svc-6">Emergency Services</li>
       </ul>
     </div>
     <div>
-      <h4>Contact</h4>
+      <h4 data-i18n="foot-ct-h">Contact</h4>
       <div class="foot-ct">
         <a href="tel:8777759657">(877) 775-9657</a>
         <a href="tel:8777795657">(877) 77-LYNKS</a>
@@ -375,7 +391,7 @@
   </div>
   <div class="foot-bot">
     <div class="container foot-bot-inner">
-      <p>&copy; <span id="yr"></span> Lynks Inc. All rights reserved. &nbsp;·&nbsp; South Florida</p>
+      <p id="foot-copy-p">&copy; <span id="yr"></span> Lynks Inc. All rights reserved. &nbsp;·&nbsp; South Florida</p>
       <div class="foot-bot-soc">
         <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
         <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
