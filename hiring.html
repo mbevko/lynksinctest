@@ -15,7 +15,12 @@
     /* Remove banner offset on this page */
     :root { --banner-h: 0px; }
 
-    /* Hero overrides */
+    /* Hero: centered and spread on large screens */
+    .hero-content { text-align: center; margin-left: auto; margin-right: auto; }
+    .hero-label { justify-content: center; }
+    .hero-label::before { display: none; }
+    .hero-title-indent { padding-left: 0; }
+    .hero-ctas { justify-content: center; }
     .hero-hire-label { color: var(--orange); }
 
     /* ── POSITIONS SECTION */
@@ -235,22 +240,24 @@
       </div>
     </a>
     <nav class="nav-links">
-      <a href="index.html#services">Services</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#contact">Contact</a>
-      <a href="index.html" class="btn btn-ghost">← Back to Site</a>
-      <a href="#apply" class="btn btn-primary">Apply Now</a>
+      <a href="index.html#services" data-i18n="h-nav-services">Services</a>
+      <a href="index.html#about" data-i18n="h-nav-about">About</a>
+      <a href="index.html#contact" data-i18n="h-nav-contact">Contact</a>
+      <button class="lang-toggle" id="langBtn" aria-label="Switch language">ES</button>
+      <a href="index.html" class="btn btn-ghost" data-i18n="h-nav-back">← Back to Site</a>
+      <a href="#apply" class="btn btn-primary" data-i18n="h-nav-apply">Apply Now</a>
     </nav>
     <button class="burger" id="burger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </div>
   <div class="mob-menu" id="mobMenu">
-    <a href="index.html#services">Services</a>
-    <a href="index.html#about">About</a>
-    <a href="index.html#contact">Contact</a>
-    <a href="index.html" class="btn btn-ghost">← Back to Site</a>
-    <a href="#apply" class="btn btn-primary">Apply Now</a>
+    <a href="index.html#services" data-i18n="h-mob-services">Services</a>
+    <a href="index.html#about" data-i18n="h-mob-about">About</a>
+    <a href="index.html#contact" data-i18n="h-mob-contact">Contact</a>
+    <a href="index.html" class="btn btn-ghost" data-i18n="h-mob-back">← Back to Site</a>
+    <a href="#apply" class="btn btn-primary" data-i18n="h-mob-apply">Apply Now</a>
+    <button class="lang-toggle lang-toggle-mob" id="langBtnMob" aria-label="Switch language">ES</button>
   </div>
 </header>
 
@@ -262,17 +269,17 @@
   <div class="hero-vignette"></div>
 
   <div class="container hero-content">
-    <p class="hero-label reveal hero-hire-label">South Florida · Fiber Optic Crews</p>
-    <h1 class="hero-title" id="heroTitle">
+    <p class="hero-label reveal hero-hire-label" data-i18n="h-hero-label">South Florida · Fiber Optic Crews</p>
+    <h1 class="hero-title" id="heroTitle" data-i18n="h-hero-title">
       Now<br>
       <span class="hero-title-indent">Hiring.</span>
     </h1>
-    <p class="hero-sub reveal">
+    <p class="hero-sub reveal" data-i18n="h-hero-sub">
       Reliable. Professional. On Time. — Join the Lynks Inc crew and get paid competitive day rates on active South Florida fiber projects.
     </p>
     <div class="hero-ctas reveal">
-      <a href="#positions" class="btn btn-primary btn-lg">View Open Positions</a>
-      <a href="#apply" class="btn btn-ghost btn-lg">Apply Now</a>
+      <a href="#positions" class="btn btn-primary btn-lg" data-i18n="h-cta-1">View Open Positions</a>
+      <a href="#apply" class="btn btn-ghost btn-lg" data-i18n="h-cta-2">Apply Now</a>
     </div>
   </div>
 
@@ -280,22 +287,22 @@
     <div class="container hero-proof-inner">
       <div class="proof-item">
         <span class="proof-val">$25–$35</span>
-        <span class="proof-lbl">Splicer / Hour</span>
+        <span class="proof-lbl" data-i18n="h-proof-lbl-1">Splicer / Hour</span>
       </div>
       <div class="proof-rule"></div>
       <div class="proof-item">
         <span class="proof-val">$150–$225</span>
-        <span class="proof-lbl">Missiling / Day</span>
+        <span class="proof-lbl" data-i18n="h-proof-lbl-2">Missiling / Day</span>
       </div>
       <div class="proof-rule"></div>
       <div class="proof-item">
         <span class="proof-val">2-Man</span>
-        <span class="proof-lbl">Crew Teams</span>
+        <span class="proof-lbl" data-i18n="h-proof-lbl-3">Crew Teams</span>
       </div>
       <div class="proof-rule"></div>
       <div class="proof-item">
-        <span class="proof-val">Active</span>
-        <span class="proof-lbl">Projects Now</span>
+        <span class="proof-val" data-i18n="h-proof-val-4">Active</span>
+        <span class="proof-lbl" data-i18n="h-proof-lbl-4">Projects Now</span>
       </div>
     </div>
   </div>
@@ -305,9 +312,9 @@
 <section class="positions" id="positions">
   <div class="container">
     <div class="sec-hd reveal">
-      <p class="sec-eye">Open Positions</p>
-      <h2 class="sec-title">Day Rate Crews Wanted</h2>
-      <p class="sec-desc">We're actively looking for reliable, skilled crews in South Florida. Both positions are team-based with immediate availability.</p>
+      <p class="sec-eye" data-i18n="h-pos-eye">Open Positions</p>
+      <h2 class="sec-title" data-i18n="h-pos-title">Day Rate Crews Wanted</h2>
+      <p class="sec-desc" data-i18n="h-pos-desc">We're actively looking for reliable, skilled crews in South Florida. Both positions are team-based with immediate availability.</p>
     </div>
 
     <div class="positions-grid">
@@ -316,46 +323,46 @@
       <div class="pos-card orange reveal">
         <div class="pos-badge orange">
           <svg viewBox="0 0 16 16" fill="none" width="12" height="12"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M5 8h6M8 5v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          Splicer Crew
+          <span data-i18n="h-badge-1">Splicer Crew</span>
         </div>
         <div class="pos-rate">$25–$35</div>
-        <div class="pos-rate-unit">Per Hour</div>
-        <div class="pos-crew">2-Man Splicing Crew</div>
+        <div class="pos-rate-unit" data-i18n="h-rate-unit-1">Per Hour</div>
+        <div class="pos-crew" data-i18n="h-crew-1">2-Man Splicing Crew</div>
         <ul class="pos-tags">
           <li>Fusion Splicing</li><li>Testing</li><li>QC</li>
         </ul>
         <div class="pos-divider"></div>
         <ul class="pos-list">
-          <li><span class="pos-chk">✓</span>Experienced &amp; certified techs preferred</li>
-          <li><span class="pos-chk">✓</span>Fusion splicing &amp; OTDR knowledge required</li>
-          <li><span class="pos-chk">✓</span>Top-tier equipment available on-site</li>
-          <li><span class="pos-chk">✓</span>Quality workmanship expected on every job</li>
-          <li><span class="pos-chk">✓</span>Consistent project availability across South FL</li>
+          <li><span class="pos-chk">✓</span><span data-i18n="h-pos-li1-1">Experienced &amp; certified techs preferred</span></li>
+          <li><span class="pos-chk">✓</span><span data-i18n="h-pos-li1-2">Fusion splicing &amp; OTDR knowledge required</span></li>
+          <li><span class="pos-chk">✓</span><span data-i18n="h-pos-li1-3">Top-tier equipment available on-site</span></li>
+          <li><span class="pos-chk">✓</span><span data-i18n="h-pos-li1-4">Quality workmanship expected on every job</span></li>
+          <li><span class="pos-chk">✓</span><span data-i18n="h-pos-li1-5">Consistent project availability across South FL</span></li>
         </ul>
-        <a href="#apply" class="pos-apply">Apply for This Position</a>
+        <a href="#apply" class="pos-apply" data-i18n="h-pos-apply-1">Apply for This Position</a>
       </div>
 
       <!-- MISSILING -->
       <div class="pos-card teal reveal d1">
         <div class="pos-badge teal">
           <svg viewBox="0 0 16 16" fill="none" width="12" height="12"><path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Missiling Crew
+          <span data-i18n="h-badge-2">Missiling Crew</span>
         </div>
         <div class="pos-rate">$150–$225</div>
-        <div class="pos-rate-unit">Per Day</div>
-        <div class="pos-crew">2-Man Missiling Crew</div>
+        <div class="pos-rate-unit" data-i18n="h-rate-unit-2">Per Day</div>
+        <div class="pos-crew" data-i18n="h-crew-2">2-Man Missiling Crew</div>
         <ul class="pos-tags">
           <li>Conduit Missiling</li><li>Placement</li><li>Pull Prep</li>
         </ul>
         <div class="pos-divider"></div>
         <ul class="pos-list">
-          <li><span class="pos-chk">✓</span>Fast &amp; efficient work pace required</li>
-          <li><span class="pos-chk">✓</span>Conduit missiling experience a plus</li>
-          <li><span class="pos-chk">✓</span>Safe &amp; reliable practices on every site</li>
-          <li><span class="pos-chk">✓</span>Meets all industry standards</li>
-          <li><span class="pos-chk">✓</span>Active South Florida projects — start soon</li>
+          <li><span class="pos-chk">✓</span><span data-i18n="h-pos-li2-1">Fast &amp; efficient work pace required</span></li>
+          <li><span class="pos-chk">✓</span><span data-i18n="h-pos-li2-2">Conduit missiling experience a plus</span></li>
+          <li><span class="pos-chk">✓</span><span data-i18n="h-pos-li2-3">Safe &amp; reliable practices on every site</span></li>
+          <li><span class="pos-chk">✓</span><span data-i18n="h-pos-li2-4">Meets all industry standards</span></li>
+          <li><span class="pos-chk">✓</span><span data-i18n="h-pos-li2-5">Active South Florida projects — start soon</span></li>
         </ul>
-        <a href="#apply" class="pos-apply">Apply for This Position</a>
+        <a href="#apply" class="pos-apply" data-i18n="h-pos-apply-2">Apply for This Position</a>
       </div>
 
     </div>
@@ -366,44 +373,44 @@
 <section class="why-hire" id="why">
   <div class="container">
     <div class="sec-hd reveal">
-      <p class="sec-eye">Why Lynks Inc</p>
-      <h2 class="sec-title">Why Work With Us</h2>
+      <p class="sec-eye" data-i18n="h-why-eye">Why Lynks Inc</p>
+      <h2 class="sec-title" data-i18n="h-why-title">Why Work With Us</h2>
     </div>
     <div class="why-hire-grid">
       <div class="wh-item reveal">
         <div class="wh-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
         </div>
-        <h4>Reliable &amp; Professional</h4>
-        <p>We run tight crews, show up on time, and carry ourselves like pros on every job.</p>
+        <h4 data-i18n="h-wh1-h">Reliable &amp; Professional</h4>
+        <p data-i18n="h-wh1-p">We run tight crews, show up on time, and carry ourselves like pros on every job.</p>
       </div>
       <div class="wh-item reveal d1">
         <div class="wh-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
         </div>
-        <h4>On-Time Every Time</h4>
-        <p>Our schedule is yours. We plan carefully and commit to deadlines without exceptions.</p>
+        <h4 data-i18n="h-wh2-h">On-Time Every Time</h4>
+        <p data-i18n="h-wh2-p">Our schedule is yours. We plan carefully and commit to deadlines without exceptions.</p>
       </div>
       <div class="wh-item reveal d2">
         <div class="wh-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-        <h4>Quality Guaranteed</h4>
-        <p>High standards on every site. Work with a team that takes pride in clean results.</p>
+        <h4 data-i18n="h-wh3-h">Quality Guaranteed</h4>
+        <p data-i18n="h-wh3-p">High standards on every site. Work with a team that takes pride in clean results.</p>
       </div>
       <div class="wh-item reveal">
         <div class="wh-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 2a7 7 0 11-4.9 12l-3.1 3 1.5 1.5-1.5 1.5-3-3 3-3 1.5 1.5-1 1A7 7 0 1112 2z"/></svg>
         </div>
-        <h4>Safety Focused</h4>
-        <p>OSHA-aligned work sites with proper traffic control and full 811 compliance.</p>
+        <h4 data-i18n="h-wh4-h">Safety Focused</h4>
+        <p data-i18n="h-wh4-p">OSHA-aligned work sites with proper traffic control and full 811 compliance.</p>
       </div>
       <div class="wh-item reveal d1">
         <div class="wh-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
         </div>
-        <h4>Steady South FL Work</h4>
-        <p>Active projects across all of South Florida mean consistent, ongoing opportunities.</p>
+        <h4 data-i18n="h-wh5-h">Steady South FL Work</h4>
+        <p data-i18n="h-wh5-p">Active projects across all of South Florida mean consistent, ongoing opportunities.</p>
       </div>
     </div>
   </div>
@@ -414,9 +421,9 @@
   <div class="container apply-inner">
 
     <div class="apply-info reveal">
-      <p class="sec-eye">Join the Team</p>
-      <h2 class="sec-title">Let's Put Footage<br>in the Ground.</h2>
-      <p class="apply-desc">Send us your info and we'll reach out within the same business day. We're actively staffing projects and are looking for solid crews right now.</p>
+      <p class="sec-eye" data-i18n="h-apply-eye">Join the Team</p>
+      <h2 class="sec-title" data-i18n="h-apply-title">Let's Put Footage<br>in the Ground.</h2>
+      <p class="apply-desc" data-i18n="h-apply-desc">Send us your info and we'll reach out within the same business day. We're actively staffing projects and looking for solid crews right now.</p>
       <div class="apply-contact">
         <a href="tel:8777759657">
           <div class="aci"><svg viewBox="0 0 20 20" fill="none"><path d="M3 3h4l2 5-2.5 1.5A11 11 0 0012.5 13.5L14 11l5 2v4a1 1 0 01-1 1C8 18 2 12 2 4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -436,15 +443,15 @@
     <form class="aform reveal d2" id="applyForm" name="careers" method="POST" netlify data-netlify-honeypot="bot-field" novalidate>
       <input type="hidden" name="form-name" value="careers" />
       <div style="display:none"><input name="bot-field" /></div>
-      <h3>Apply Now</h3>
+      <h3 data-i18n="h-form-title">Apply Now</h3>
       <div class="frow">
-        <div class="fg"><label>Full Name</label><input type="text" id="aname" name="name" placeholder="John Smith" required /></div>
-        <div class="fg"><label>Phone</label><input type="tel" id="aphone" name="phone" placeholder="(555) 000-0000" required /></div>
+        <div class="fg"><label data-i18n="h-lbl-name">Full Name</label><input type="text" id="aname" name="name" placeholder="John Smith" data-i18n-ph="h-ph-name" required /></div>
+        <div class="fg"><label data-i18n="h-lbl-phone">Phone</label><input type="tel" id="aphone" name="phone" placeholder="(555) 000-0000" required /></div>
       </div>
-      <div class="fg"><label>Email</label><input type="email" id="aemail" name="email" placeholder="you@email.com" required /></div>
+      <div class="fg"><label data-i18n="h-lbl-email">Email</label><input type="email" id="aemail" name="email" placeholder="you@email.com" required /></div>
       <div class="fg">
-        <label>Position</label>
-        <select id="apos" name="position">
+        <label data-i18n="h-lbl-pos">Position</label>
+        <select id="apos" name="position" data-i18n-select="h-apos">
           <option value="">Select position…</option>
           <option>Splicer Crew</option>
           <option>Missiling Crew</option>
@@ -452,8 +459,8 @@
         </select>
       </div>
       <div class="fg">
-        <label>Years of Experience</label>
-        <select id="aexp" name="experience">
+        <label data-i18n="h-lbl-exp">Years of Experience</label>
+        <select id="aexp" name="experience" data-i18n-select="h-aexp">
           <option value="">Select experience…</option>
           <option>Less than 1 year</option>
           <option>1–2 years</option>
@@ -462,14 +469,14 @@
         </select>
       </div>
       <div class="fg">
-        <label>Anything else you'd like us to know?</label>
-        <textarea id="amsg" name="message" rows="3" placeholder="Certifications, availability, crew size, equipment…"></textarea>
+        <label data-i18n="h-lbl-msg">Anything else you'd like us to know?</label>
+        <textarea id="amsg" name="message" rows="3" placeholder="Certifications, availability, crew size, equipment…" data-i18n-ph="h-ph-msg"></textarea>
       </div>
-      <button type="button" class="btn btn-primary btn-full btn-lg" id="asubmit">Submit Application</button>
-      <p class="f-note" style="margin-top:14px">We typically reach out within the same business day.</p>
+      <button type="button" class="btn btn-primary btn-full btn-lg" id="asubmit" data-i18n="h-submit">Submit Application</button>
+      <p class="f-note" style="margin-top:14px" data-i18n="h-f-note">We typically reach out within the same business day.</p>
       <div class="f-success" id="asuccess">
         <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#c8a96e" stroke-width="1.5"/><path d="M7 12l3 3 7-7" stroke="#c8a96e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <p>Application received! We'll be in touch shortly.</p>
+        <p data-i18n="h-f-success">Application received! We'll be in touch shortly.</p>
       </div>
     </form>
 
@@ -484,7 +491,7 @@
         <img src="logo2.png" alt="Lynks Inc" class="foot-logo-img" />
       </div>
       <a href="hiring.html" class="foot-hire-badge"><span class="hire-dot"></span>Now Hiring</a>
-      <p class="foot-tagline">From conduit to connection — we keep you linked.</p>
+      <p class="foot-tagline" data-i18n="foot-tagline">From conduit to connection — we keep you linked.</p>
       <div class="foot-social">
         <a href="#" class="soc-icon" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
         <a href="#" class="soc-icon" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
